@@ -1,103 +1,72 @@
 import Image from "next/image";
+import Header from "./components/header";
+import Gallery from "./photos";
+import FadeInOnScroll from "./components/scroll";
+import { FadeInOnScrollFast } from "./components/scroll";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+     <div className="w-full">
+      <Header />
+      {/* HERO SECTION */}
+      <section className="relative w-full h-screen">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          className="mynd"
+          src="/image.png"
+          alt="minni vellir"
+          fill
+          style={{ objectFit: 'cover' }}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <div className="absolute inset-0 flex items-center p-30 text-white bg-black/10 flex-col">
+        <h1 style={{ fontFamily: 'Limelight' }} className="text-7xl font-bold ">MV</h1>
+        <h1 style={{ fontFamily: 'Julius' }} className="text-[20px]">Minni-Vellir Farmhouse</h1>
+        <h1 style={{ fontFamily: 'Julius' }} className="text-[20px]">Experience the South of Iceland</h1>
+      </div>
+       </section>
+       <section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      
+      <div style={{fontFamily: 'Jura' ,color:'#6D706C'}} className="flex flex-col gap-20 p-50 pt-0">
+     <FadeInOnScroll>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-20">
+        <h1 id="farmhouse" className="text-3xl"  style={{ fontFamily: 'Julius', fontWeight: 'bold'}}>The Farmhouse</h1>
+        <h3 className="text-2xl" style={{color:'rgb(49, 50, 49)'}}> Minni-Vellir Farmhouse offers comfortable f accommodation for up to 10 people.</h3>
+        </div> </FadeInOnScroll>
+   
+<FadeInOnScrollFast>
+        <div className='pt-0'>
+        <Gallery /></div>
+        </FadeInOnScrollFast>
+        <div className="flex flex-col gap-5 items-center">
+          <h1 id="Fleiri" className="text-3xl">Fleiri</h1>
+        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
+
+Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
+
+After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
+        </div><div className="flex flex-col gap-5 items-center"><h1 id="Titlar"  className="text-3xl"> Titlar</h1>
+        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
+
+Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
+
+After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
+        </div><div className="flex flex-col gap-5 items-center"><h1 id="Koma" className="text-3xl"> Koma</h1>
+        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
+
+Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
+
+After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
+        </div><div className="flex flex-col gap-5 items-center"><h1 id="Her"  className="text-3xl"> Hér</h1>
+        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
+
+Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
+
+After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
+        </div> </div> 
+      </section>
     </div>
-  );
+       
+    );
 }
+       
