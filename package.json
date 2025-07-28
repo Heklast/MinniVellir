@@ -13,6 +13,7 @@
     "framer-motion": "^12.23.10",
     "graphql": "^16.11.0",
     "graphql-request": "^7.2.0",
+    "keen-slider": "^6.8.6",
     "next": "15.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",

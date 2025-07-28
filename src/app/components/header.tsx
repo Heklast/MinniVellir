@@ -35,7 +35,7 @@ export default function Header() {
             className="flex flex-col gap-6 text-xl text-black"
           >
             <a href="#farmhouse" onClick={() => setIsOpen(false)}>The Farmhouse</a>
-            <a href="#Fleiri" onClick={() => setIsOpen(false)}>Fleiri</a>
+            <a href="#location" onClick={() => setIsOpen(false)}>Location</a>
             <a href="#Titlar" onClick={() => setIsOpen(false)}>Titlar</a>
           </nav>
         </div>
