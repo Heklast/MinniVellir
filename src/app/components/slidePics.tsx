@@ -1,7 +1,9 @@
 'use client';
 import 'keen-slider/keen-slider.min.css';
+import KeenSlider from 'keen-slider';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
+import  { useEffect } from 'react';
 
 const images = [
   "/image.png",
@@ -11,11 +13,21 @@ const images = [
 
 export default function Carousel() {
      const [currentSlide, setCurrentSlide] = useState(0);
+     useEffect(() => {
+  const interval = setInterval(() => {
+    instanceRef.current?.next();
+  }, 5000); //á 3 hverri sek
+
+  return () => clearInterval(interval);
+}, []);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
+    defaultAnimation: {
+    duration: 2000, // <- 1000ms = 1 second for sliding transition
+  },
   });
 
   return (

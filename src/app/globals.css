@@ -70,8 +70,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-left: 5;
-  padding-right: 5;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .location-card{
@@ -87,8 +87,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-left: 5;
-  padding-right: 5;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .things-to-do{
@@ -106,4 +106,97 @@ color:#3D3935;
 font-weight:500;
 letter-spacing:0.1em;
 font-size: xx-large;
+}
+
+.TTD-card{
+  padding: 10rem;
+  padding-bottom: 5rem;
+  padding-top: 0rem;
+  display:flex;
+  flex-direction: row;
+  gap:3rem;
+}
+
+.TTD-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ flex: 1.5;
+}
+.TTD-image{
+  padding-top: 2rem;
+  box-shadow: #0a0a0a;
+  overflow: hidden;
+  position: relative;
+}
+
+.TTD-card > .TTD-image {
+  flex: 1;
+}
+
+.TTD-button{
+  color:#3D3935;
+  background-color: rgb(181, 164, 164);
+  font-family:'Baskerville';
+  letter-spacing:0.1em;
+  font-weight: bold;
+  width:fit-content;
+  padding:0.5em;
+  justify-content: center;
+  border-radius: 5%;
+}
+
+.TTD-intro{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  padding-inline: 15rem;
+}
+
+.contactus{
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:1rem;
+  padding-inline: 5rem;
+}
+
+.contactusText{
+  display:flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input{
+  background-color: white;
+  
+}
+
+input:hover{
+  background-color: #b2b0b0;
+}
+
+.textfield{
+  padding:0.5rem;
+  border:#0a0a0a solid;
+}
+.messTextfield{
+  padding-bottom:5rem;
+  border:#0a0a0a solid;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap:3;
+  width:fit-content;
+  padding: 0rem;
+}
+
+.formogbutton{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
 }

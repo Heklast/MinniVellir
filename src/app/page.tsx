@@ -5,6 +5,7 @@ import FadeInOnScroll from "./components/scroll";
 import { FadeInOnScrollFast } from "./components/scroll";
 import Carousel from "./components/slidePics";
 import ThingsToDo from "./components/thingsToDoSlider";
+import ContactUs from "./components/contactUsForm";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
           style={{ objectFit: 'cover', boxShadow:'initial' }}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>*/}
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 flex items-center p-30 text-white bg-black/10 flex-col">
         <h2 style={{ fontFamily: 'Limelight' }} className="text-7xl font-bold ">MV</h2>
         <h2 style={{ fontFamily: 'Julius' }} className="text-[20px]">Minni-Vellir Farmhouse</h2>
@@ -47,7 +49,7 @@ export default function Home() {
         <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people. Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people.</h3>
         </div>  
    
-       <div className="pt-0 min-w-[900px] h-[450px] shadow-xl overflow-hidden relative">
+       <div className="pt-0 mt-12 min-w-[900px] h-[450px] shadow-xl overflow-hidden relative">
   <Carousel />
 </div></div></FadeInOnScroll>
         
@@ -55,7 +57,7 @@ export default function Home() {
 {/*prófa location í svipuðu og GR*/}
 <FadeInOnScroll>
 <div className="location-card ">
-  <div className="w-full h-[400px]">
+  <div className="w-full h-[400px] mt-12">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1749.9376583668693!2d-20.22119742317767!3d63.98535687719389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d6ea3b46186fc1%3A0x3d0b3160ae87163c!2sMinni%20Vellir%20Farmhouse!5e0!3m2!1sen!2sis!4v1753712914686!5m2!1sen!2sis" 
           width="800" 
           height="400" 
@@ -73,12 +75,69 @@ export default function Home() {
         </div>
 </FadeInOnScroll>
 
-<div className="things-to-do">
-  <h1 className="pb-5 text-center">Things To Do</h1> 
+
+{/*prófa nýtt things do to!!!!!*/ }
+<FadeInOnScroll>
+<div className="TTD-intro">
+<h1 className="pb-0 text-center">Things To Do</h1> 
+<h5 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h5>
+</div></FadeInOnScroll>
+<FadeInOnScroll>
+ <div className="TTD-card">
+        <div className="TTD-text">
+
+        <h1  className="text-4xl leading-relaxed" >Horseback riding</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go horse riding!</h3>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button></div>  
+   
+       <div className="TTD-image">
+        <img src="/image.png"></img>
+</div></div></FadeInOnScroll>
+
+<FadeInOnScroll>
+<div className="TTD-card">
+  <div className="TTD-image">
+        <img src="/image.png"></img>
+</div>
+        <div className="TTD-text">
+        <h1  className="text-4xl leading-relaxed" >Bike rides</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go on a bike trip!</h3>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button>
+        </div>  
+   
+       </div>
+       </FadeInOnScroll>
+
+<FadeInOnScroll>
+       <div className="TTD-card">
+        <div className="TTD-text">
+
+        <h1  className="text-4xl leading-relaxed" >Hiking</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go hiking!</h3>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button></div>  
+   
+       <div className="TTD-image">
+        <img src="/image.png"></img>
+</div></div></FadeInOnScroll>
+
+<div className="contactus">
+  <div className="contactusText">
+  <h1 style={{color:'black'}}>Contact us</h1>
+  <h3 className="text-xl font-light leading-relaxed" style={{color:'black', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Please contact us for bookings and/or if you have any questions.</h3>
+  </div><ContactUs></ContactUs>
+</div>
 
 
-<div className="pt-0 p-0 min-w-[900px] h-[350px] shadow-xl overflow-hidden relative">
-<ThingsToDo></ThingsToDo></div></div>
+
+
+{/*gamlaaaa*/}
+
 <FadeInOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-20">
         <h1 id="farmhouse" className="text-3xl"  style={{ fontFamily: 'Jura', fontWeight: 'bold'}}>THE FARMHOUSE</h1>
@@ -89,6 +148,8 @@ export default function Home() {
         <div className='pt-0'>
         <Gallery /></div>
         </FadeInOnScrollFast>
+
+
 
 
 {/*gamla location*/}
@@ -109,26 +170,15 @@ export default function Home() {
 </div></div>
 
 
-{/*allt f neðan*/}
-        <div className="flex flex-col gap-5 items-center"><h1 id="Titlar"  className="text-3xl"> Titlar</h1>
-        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
+{/*Gamla things to dooooo*/}
 
-Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
+<div className="things-to-do">
+  <h1 className="pb-5 text-center">Things To Do</h1> 
 
-After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
-        </div><div className="flex flex-col gap-5 items-center"><h1 id="Koma" className="text-3xl"> Koma</h1>
-        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
 
-Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
-
-After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
-        </div><div className="flex flex-col gap-5 items-center"><h1 id="Her"  className="text-3xl"> Hér</h1>
-        <h3 className="text-xl p-10 pt-0" style={{color:'rgb(49, 50, 49)'}}>Beyoncé Giselle Knowles-Carter (/biˈɒnseɪ/ ⓘ bee-ON-say;[6] born September 4, 1981) is an American singer, songwriter, actress, and businesswoman. Dubbed "Queen Bey", she is regarded as one of the most culturally significant figures of the 21st century. Over a three-decade career characterized by continuous musical reinvention, she has been credited with redefining the standards of artistry and performance in popular music. Known for her vocal ability, musical versatility, and live performances, Beyoncé is often deemed one of the most influential artists of all time.[7]
-
-Beyoncé rose to fame in 1997 as the lead singer of Destiny's Child, one of the best-selling girl groups of all time. Her debut solo album, Dangerously in Love (2003), became one of the best-selling albums of the 21st century. After Destiny's Child disbanded in 2005, Beyoncé released the funk-imbued set B'Day (2006) and later starred in the drama film Dreamgirls (2006). Her marriage to rapper Jay-Z and portrayal of Etta James in the biopic Cadillac Records (2008) influenced the album I Am... Sasha Fierce (2008), which explored pop and electropop. The albums included the U.S. Billboard Hot 100 number-one singles "Crazy in Love", "Baby Boy", "Check on It", "Irreplaceable", and "Single Ladies (Put a Ring on It)".
-
-After forming the management company Parkwood Entertainment, Beyoncé embraced traditional R&B on 4 (2011). Her electronic-influenced eponymous album (2013) inspired setting Frid</h3>
-        </div> </div> 
+<div className="pt-0 p-0 min-w-[900px] h-[350px] shadow-xl overflow-hidden relative">
+<ThingsToDo></ThingsToDo></div></div>
+ </div> 
       </section>
     </div>
        
