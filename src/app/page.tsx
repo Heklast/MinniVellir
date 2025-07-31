@@ -6,6 +6,7 @@ import { FadeInOnScrollFast } from "./components/scroll";
 import Carousel from "./components/slidePics";
 import ThingsToDo from "./components/thingsToDoSlider";
 import ContactUs from "./components/contactUsForm";
+import FooterSlider from "./components/footerSlider";
 
 export default function Home() {
   return (
@@ -29,6 +30,12 @@ export default function Home() {
         <h2 style={{ fontFamily: 'Julius' }} className="text-[20px]">Experience the South of Iceland</h2>
       </div>
        </section>
+      
+       <div className=" p-10" style={{backgroundColor:'#DAD9D6'}}>
+         <div className="bordertexti">
+        <h2 style={{fontFamily:"Jura", fontSize:"20px"}}>Minni Vellir Farmhouse, Hella, Iceland</h2>
+        <h3 style={{fontFamily:"Jura"}}>minnivellir@gmail.com</h3></div>
+        </div>
        <section>
 
      { /*main content*/}
@@ -44,9 +51,9 @@ export default function Home() {
         <FadeInOnScroll>
         <div className="slider-card">
         <div className="slider-text">
-        <p id="farmhouse" className="pb-5" style={{fontFamily:'Baskerville', color:'#3D3935'}}>MINNI-VELLIR</p>
+        <p id="farmhouse" className="pb-5" style={{fontFamily:'Jura', color:'#3D3935'}}>MINNI-VELLIR</p>
         <h1  className="text-4xl leading-relaxed" >The Farmhouse</h1>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people. Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people. Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people.</h3>
         </div>  
    
        <div className="pt-0 mt-12 min-w-[900px] h-[450px] shadow-xl overflow-hidden relative">
@@ -68,9 +75,9 @@ export default function Home() {
 </div>
 
         <div className="location-text">
-           <p id="location" className="pb-5" style={{fontFamily:'Baskerville', color:'#3D3935'}}>SOUTH ICELAND</p>
-          <h1  className="text-4xl leading-relaxed" style={{ fontFamily: 'Baskerville',color:'#3D3935', fontWeight:'500',  letterSpacing:'0.1em'}}>Location</h1>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}>Located in the South of Iceland at the heart of the farmers side of Iceland, Minni-Vellir provides guests with a beautiful scenery, pristine rivers, mountains and lands all around.   </h3>
+           <p id="location" className="pb-5" style={{fontFamily:'Jura', color:'#3D3935'}}>SOUTH ICELAND</p>
+          <h1  className="text-4xl leading-relaxed" style={{ fontFamily: 'Jura',color:'#3D3935', fontWeight:'500',  letterSpacing:'0.1em'}}>Location</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}>Located in the South of Iceland at the heart of the farmers side of Iceland, Minni-Vellir provides guests with a beautiful scenery, pristine rivers, mountains and lands all around.   </h3>
         </div>
         </div>
 </FadeInOnScroll>
@@ -80,15 +87,15 @@ export default function Home() {
 <FadeInOnScroll>
 <div className="TTD-intro">
 <h1 className="pb-0 text-center">Things To Do</h1> 
-<h5 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h5>
+<h5 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h5>
 </div></FadeInOnScroll>
 <FadeInOnScroll>
  <div className="TTD-card">
         <div className="TTD-text">
 
         <h1  className="text-4xl leading-relaxed" >Horseback riding</h1>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else.</h3>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go horse riding!</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go horse riding!</h3>
         <button className="TTD-button"> 
           <a href='#contactus'>Contact us</a></button></div>  
    
@@ -103,8 +110,8 @@ export default function Home() {
 </div>
         <div className="TTD-text">
         <h1  className="text-4xl leading-relaxed" >Bike rides</h1>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else.</h3>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go on a bike trip!</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go on a bike trip!</h3>
         <button className="TTD-button"> 
           <a href='#contactus'>Contact us</a></button>
         </div>  
@@ -117,8 +124,8 @@ export default function Home() {
         <div className="TTD-text">
 
         <h1  className="text-4xl leading-relaxed" >Hiking</h1>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand.</h3>
-        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go hiking!</h3>
+        <h4 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand.</h4>
+        <h4 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go hiking!</h4>
         <button className="TTD-button"> 
           <a href='#contactus'>Contact us</a></button></div>  
    
@@ -126,11 +133,15 @@ export default function Home() {
         <img src="/image.png"></img>
 </div></div></FadeInOnScroll>
 
+
+<div className="footer">
+<FooterSlider></FooterSlider>
 <div className="contactus">
   <div className="contactusText">
   <h1 style={{color:'black'}}>Contact us</h1>
-  <h3 className="text-xl font-light leading-relaxed" style={{color:'black', fontFamily:'Baskerville', letterSpacing:'0.1em', fontWeight:'500'}}> Please contact us for bookings and/or if you have any questions.</h3>
+  <h3 className="text-xl font-light leading-relaxed" style={{color:'black', fontFamily:'Jura', letterSpacing:'0.1em', fontWeight:'500'}}> Please contact us for bookings and/or if you have any questions.</h3>
   </div><ContactUs></ContactUs>
+</div>
 </div>
 
 
@@ -154,7 +165,7 @@ export default function Home() {
 
 {/*gamla location*/}
 
-        <div className="flex flex-row pt-20 justify-center ">
+        <div className="flex flex-row pt-20 pl-20 justify-center ">
         <div className="flex flex-col gap-5 items-left">
           <h1 id="location" className="text-3xl" style={{ fontFamily: 'Jura', fontWeight: 'bold'}}>LOCATION</h1>
         <h3 className="text-2xl pr-5" style={{color:'rgb(49, 50, 49)'}}>Located in the South of Iceland at the heart of the farmers side of Iceland, Minni-Vellir provides guests with a beautiful scenery, pristine rivers, mountains and lands all around.   </h3>
