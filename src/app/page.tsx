@@ -7,10 +7,14 @@ import Carousel from "./components/slidePics";
 import ThingsToDo from "./components/thingsToDoSlider";
 import ContactUs from "./components/contactUsForm";
 import FooterSlider from "./components/footerSlider";
+import Link from "next/link";
 
 export default function Home() {
   return (
      <div className="w-full">
+      <Link href="/profa">
+  <button className="TTD-button">prófunarpage</button>
+</Link>
       <Header />
       {/* HERO SECTION */}
       <section className="relative w-full h-screen">
@@ -144,6 +148,58 @@ export default function Home() {
 </div>
 </div>
 
+
+{/*PRÓFA NÝTT TTD LETUR OG PADDING*/}
+
+<div className="TTD-prof-bg">
+<FadeInOnScroll>
+<div className="TTD-introo">
+<h1 style={{fontFamily:'Garamond'}} className="pb-0 text-center">Things To Do</h1> 
+<h5 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h5>
+</div></FadeInOnScroll>
+<FadeInOnScroll>
+ <div className="TTD-card">
+        <div className="TTD-text">
+
+        <h1  style={{fontFamily:'Garamond'}} className="text-4xl leading-relaxed" >Horseback riding</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go horse riding!</h3>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button></div>  
+   
+       <div className="TTD-image">
+        <img src="/image.png"></img>
+</div></div></FadeInOnScroll>
+
+<FadeInOnScroll>
+<div className="TTD-card">
+  <div className="TTD-image">
+        <img src="/image.png"></img>
+</div>
+        <div className="TTD-text">
+        <h1  style={{fontFamily:'Garamond'}} className="text-4xl leading-relaxed" >Bike rides</h1>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else.</h3>
+        <h3 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go on a bike trip!</h3>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button>
+        </div>  
+   
+       </div>
+       </FadeInOnScroll>
+
+<FadeInOnScroll>
+       <div className="TTD-card">
+        <div className="TTD-text">
+
+        <h1  style={{fontFamily:'Garamond'}} className="text-4xl leading-relaxed" >Hiking</h1>
+        <h4 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand.</h4>
+        <h4 className="text-xl font-light leading-relaxed" style={{color:'#3D3935', fontFamily:'Garamond', letterSpacing:'0.1em', fontWeight:'500'}}> Let us know if you want to go hiking!</h4>
+        <button className="TTD-button"> 
+          <a href='#contactus'>Contact us</a></button></div>  
+   
+       <div className="TTD-image">
+        <img src="/image.png"></img>
+</div></div></FadeInOnScroll></div>
 
 
 

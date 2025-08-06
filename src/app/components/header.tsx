@@ -1,33 +1,57 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowLogo(window.scrollY > 100); // Adjust threshold if needed
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      {/*hamburger menu*/}
-      <div className="absolute top-4 right-4 z-50 p-2">
-        {!isOpen ? (
-          <button
-            style={{ color: 'white' }}
-            className="text-3xl"
-            onClick={() => setIsOpen(true)}
-          >
-            ☰
-          </button>
-        ) : (
-          <button
-            style={{ color: 'black' }}
-            className="text-3xl"
-            onClick={() => setIsOpen(false)}
-          >
-            ✕
-          </button>
-        )}
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        showLogo ? 'bg-white/30 backdrop-blur shadow-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="flex items-center justify-between px-6 py-4">
+        {/*Logo, MV*/}
+        <div>
+          {showLogo && (
+            <p style={{ fontFamily: 'Limelight', color:'#3D3935' }} className="text-3xl font-bold">
+              MV
+            </p>
+          )}
+        </div>
+
+        {/* Right side: Hamburger (always visible) */}
+        <div className="z-50">
+          {!isOpen ? (
+            <button
+              className="text-3xl"
+              style={{ color: showLogo ? '#3D3935' : 'white' }}
+              onClick={() => setIsOpen(true)}
+            >
+              ☰
+            </button>
+          ) : (
+            <button
+              className="text-3xl text-black"
+              onClick={() => setIsOpen(false)}
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
 
-      {/*sidebar menu */}
+      {/* Sidebar menu */}
       {isOpen && (
         <div className="fixed top-0 right-0 h-screen w-1/4 bg-white flex flex-col items-center justify-center shadow-lg z-40">
           <nav
