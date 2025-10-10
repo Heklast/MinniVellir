@@ -58,7 +58,7 @@ export default function ThingsToDo() {
   <h3  style={{ fontFamily: 'Garamond' }} className="text-xl font-light leading-relaxed pb-10">A sneakpeak into the cozy farmhouse that Minni-Vellir Farmhouse is.</h3>
 </div>
       {/* SLIDER */}
-      <div ref={sliderRef} className="keen-slider w-full h-full relative">
+      <div ref={sliderRef} className="keen-slider w-full h-130 relative">
         {images.map((img, i) => (
           <div
             key={i}

@@ -12,9 +12,7 @@ import Link from "next/link";
 export default function Home() {
   return (
      <div className="w-full">
-      <Link href="/profa">
-  <button className="TTD-button">prófunarpage</button>
-</Link>
+      
       <Header />
       {/* HERO SECTION */}
       <section className="relative w-full h-screen">
@@ -39,6 +37,9 @@ export default function Home() {
          <div className="bordertexti">
         <h2 style={{fontFamily:"Jura", fontSize:"20px"}}>Minni Vellir Farmhouse, Hella, Iceland</h2>
         <h3 style={{fontFamily:"Jura"}}>minnivellir@gmail.com</h3></div>
+        <Link href="/profa">
+  <button className="TTD-button">prófunarpage</button>
+</Link>
         </div>
        <section>
 
@@ -68,10 +69,10 @@ export default function Home() {
 {/*prófa location í svipuðu og GR*/}
 <FadeInOnScroll>
 <div className="location-card ">
-  <div className="w-full h-[400px] mt-12">
+  <div className="w-full h-[200px] mt-12">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1749.9376583668693!2d-20.22119742317767!3d63.98535687719389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d6ea3b46186fc1%3A0x3d0b3160ae87163c!2sMinni%20Vellir%20Farmhouse!5e0!3m2!1sen!2sis!4v1753712914686!5m2!1sen!2sis" 
           width="800" 
-          height="400" 
+          height="300" 
           style={{border:0}} 
           allowFullScreen 
           loading="lazy" 

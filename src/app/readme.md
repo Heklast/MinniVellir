@@ -36,3 +36,26 @@ tengja líka DATOCMS?
 
 
 
+
+
+
+Fra mömmu
+    minnka contact form
+    setja border neðst of myndaslider, hægt að ýta á myndirnar, 3 á skjá
+    border, sama lit og gordon
+    border beint f neðan hero
+        address og email
+    breyta öllu letir í jura
+    breikka mynd í TTD
+
+
+deplar eru með gotham á main og larken á titlum 
+    https://elevenexperience.com/lodge-destinations/iceland/eleven-deplar-farm/winter-season
+
+
+
+    breyta örvum
+    border litur og mjórri header
+    minnka myndir í glory section
+    bulletpoint lista í acc og mynd, sama og ttd
+    hafa loc sama og ttd

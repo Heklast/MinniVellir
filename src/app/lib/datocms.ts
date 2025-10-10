@@ -21,5 +21,5 @@ export async function fetchGalleryPhotos() {
     }
   `;
   const data = await client.request(query);
-  return data.allSummerhouses[0]?.gallery || [];
+  return data.photos[0]?.gallery || [];
 }

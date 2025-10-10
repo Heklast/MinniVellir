@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowLogo(window.scrollY > 100); // Adjust threshold if needed
+      setShowLogo(window.scrollY > 300);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -16,11 +16,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        showLogo ? 'bg-white/30 backdrop-blur shadow-md' : 'bg-transparent'
-      }`}
+    style={{ backgroundColor: showLogo ? '#DAD9D6' : 'transparent' }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
     >
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between px-6 py-0">
         {/*Logo, MV*/}
         <div>
           {showLogo && (
@@ -30,11 +29,11 @@ export default function Header() {
           )}
         </div>
 
-        {/* Right side: Hamburger (always visible) */}
+        {/* Hamburger menu*/}
         <div className="z-50">
           {!isOpen ? (
             <button
-              className="text-3xl"
+              className="text-3xl p-5"
               style={{ color: showLogo ? '#3D3935' : 'white' }}
               onClick={() => setIsOpen(true)}
             >

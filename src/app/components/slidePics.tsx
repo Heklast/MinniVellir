@@ -16,7 +16,7 @@ export default function Carousel() {
      useEffect(() => {
   const interval = setInterval(() => {
     instanceRef.current?.next();
-  }, 5000); //á 3 hverri sek
+  }, 5000); //á 5 hverri sek
 
   return () => clearInterval(interval);
 }, []);
@@ -26,7 +26,7 @@ export default function Carousel() {
       setCurrentSlide(slider.track.details.rel);
     },
     defaultAnimation: {
-    duration: 2000, // <- 1000ms = 1 second for sliding transition
+    duration: 2000, 
   },
   });
 
@@ -47,16 +47,16 @@ export default function Carousel() {
       absolute segir að það eigi að horfa á næsta parent sem er myndin í rauninni, eða sliderinn*/}
         <button
           onClick={() => instanceRef.current?.prev()}
-          className="w-15 h-15 flex items-center justify-center text-5xl font-light bg-[rgba(200,140,120,0.6)] hover:bg-[rgba(230,160,120,0.4)] hover:cursor-pointer text-white shadow"
+          className="font-serif w-15 h-15 flex items-center justify-center text-3xl font-light bg-[rgba(200,140,120,0.6)] hover:bg-[rgba(230,160,120,0.4)] hover:cursor-pointer text-white shadow"
           
         >
-          ‹
+          &larr;
         </button>
         <button
           onClick={() => instanceRef.current?.next()}
-          className="w-15 h-15 flex items-center justify-center text-5xl font-light bg-[rgba(200,140,120,0.6)] hover:bg-[rgba(230,160,120,0.4)] hover:cursor-pointer text-white shadow"
+          className="font-serif w-15 h-15 flex items-center justify-center text-3xl font-light bg-[rgba(200,140,120,0.6)] hover:bg-[rgba(230,160,120,0.4)] hover:cursor-pointer text-white shadow"
         >
-          ›
+          &rarr;
         </button>
            </div>
          {/* Dots */}

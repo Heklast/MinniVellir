@@ -89,7 +89,7 @@ body {
   padding-bottom:5rem;
   display:flex;
   flex-direction: row;
-  gap:4rem;
+  gap:1rem;
 }
 
 .location-text{
@@ -179,10 +179,6 @@ font-size: xx-large;
   gap:2rem;
   padding-inline: 20rem;
   padding-bottom:2rem;
-}
-
-.TTD-prof-bg{
-  background-color:#DAD9D6 ;
 }
 
 .contactus{
