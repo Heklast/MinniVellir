@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 const photos = [
   { src: "/image.png", width: 1200, height: 800 },
-   { src: "/image.png", width: 1200, height: 800 },
+   { src: "https://res.cloudinary.com/ddnepgvbc/image/upload/v1760093721/PANO_0002_ogzlda.jpg", width: 1200, height: 800 },
 ];
 
 export default function Gallery() {
