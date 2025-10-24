@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import HamburgerMenu from './hamburgerMenu';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
@@ -28,41 +28,8 @@ export default function Header() {
             </p>
           )}
         </div>
-
-        {/* Hamburger menu*/}
-        <div className="z-50">
-          {!isOpen ? (
-            <button
-              className="text-3xl p-5"
-              style={{ color: showLogo ? '#3D3935' : 'white' }}
-              onClick={() => setIsOpen(true)}
-            >
-              ☰
-            </button>
-          ) : (
-            <button
-              className="text-3xl text-black"
-              onClick={() => setIsOpen(false)}
-            >
-              ✕
-            </button>
-          )}
-        </div>
+<HamburgerMenu></HamburgerMenu>
       </div>
-
-      {/* Sidebar menu */}
-      {isOpen && (
-        <div className="fixed top-0 right-0 h-screen w-1/4 bg-white flex flex-col items-center justify-center shadow-lg z-40">
-          <nav
-            style={{ fontFamily: 'Jura' }}
-            className="flex flex-col gap-6 text-xl text-black"
-          >
-            <a href="#farmhouse" onClick={() => setIsOpen(false)}>The Farmhouse</a>
-            <a href="#location" onClick={() => setIsOpen(false)}>Location</a>
-            <a href="#Titlar" onClick={() => setIsOpen(false)}>Titlar</a>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

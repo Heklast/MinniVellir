@@ -14,8 +14,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -60,6 +58,8 @@ body {
   font-display: swap;
 }
 
+img, video, canvas, iframe { max-width: 100%; height: auto; display: block; }
+
 .slider-card{
   padding: 2rem;
   padding-bottom: 5rem;
@@ -76,6 +76,12 @@ body {
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (max-width: 700px) {
+  .slider-card {
+    flex-direction: column;
+  }
 }
 
 .location-card{
@@ -100,13 +106,14 @@ body {
   flex-direction: column;
 
 }
-p{
-  font-family: 'Jura';
+
+h3{
+font-weight:500;
+letter-spacing:0.1em;
 }
 
+
 h1{
-font-family: 'Jura';
-color:#3D3935;
 font-weight:500;
 letter-spacing:0.1em;
 font-size: xx-large;
@@ -120,7 +127,13 @@ font-size: xx-large;
   display:flex;
   flex-direction: row;
   gap:3rem;
-  
+  width:auto;
+}
+@media (max-width: 700px) {
+  .TTD-card {
+    flex-direction: column;
+    width: fit-content;
+  }
 }
 
 .TTD-text{
