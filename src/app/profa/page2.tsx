@@ -4,7 +4,7 @@ import Gallery from "../photos";
 import FadeInOnScroll from "../components/scroll";
 import { FadeInOnScrollFast } from "../components/scroll";
 import Carousel from "../components/slidePics";
-import ThingsToDo from "../components/thingsToDoSlider";
+import ThingsToDo from "../components/accommodationSection";
 import ContactUs from "../components/contactUsForm";
 import FooterSlider from "../components/footerSlider";
 import Link from "next/link";

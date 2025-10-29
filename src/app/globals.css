@@ -14,8 +14,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -60,6 +58,8 @@ body {
   font-display: swap;
 }
 
+img, video, canvas { max-width: 100%; height: auto; display: block; }
+
 .slider-card{
   padding: 2rem;
   padding-bottom: 5rem;
@@ -76,6 +76,12 @@ body {
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (max-width: 700px) {
+  .slider-card {
+    flex-direction: column;
+  }
 }
 
 .location-card{
@@ -100,17 +106,46 @@ body {
   flex-direction: column;
 
 }
-p{
-  font-family: 'Jura';
+
+h3{
+font-weight:500;
+letter-spacing:0.1em;
 }
 
+
 h1{
-font-family: 'Jura';
-color:#3D3935;
 font-weight:500;
 letter-spacing:0.1em;
 font-size: xx-large;
 }
+.loc-card{
+  padding-left: 2rem;
+  padding-right:5rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  display:flex;
+  flex-direction: row;
+  gap:3rem;
+  width:auto;
+}
+
+.loc-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ flex: 1;
+
+ padding:1rem;
+}
+
+.loc-image{
+  padding-top: 2rem;
+  box-shadow: #0a0a0a;
+  overflow: hidden;
+  position: relative;
+  height: 30rem;
+}
+
 
 .TTD-card{
   padding-left: 2rem;
@@ -120,7 +155,14 @@ font-size: xx-large;
   display:flex;
   flex-direction: row;
   gap:3rem;
-  
+  width:auto;
+ 
+}
+@media (max-width: 700px) {
+  .TTD-card {
+    flex-direction: column;
+    width: fit-content;
+  }
 }
 
 .TTD-text{
@@ -132,12 +174,22 @@ font-size: xx-large;
  padding:1rem;
 }
 .TTD-image{
-  padding-top: 2rem;
+  /*padding-top: 2rem;*/
   box-shadow: #0a0a0a;
   overflow: hidden;
   position: relative;
   height: 20rem;
 }
+
+.TTD-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom; /* show the bottom part */
+  display: block;
+}
+
+
 
 .TTD-card > .TTD-image {
   flex: 1;
@@ -166,6 +218,7 @@ font-size: xx-large;
   flex-direction: column;
   gap:2rem;
   padding-inline: 15rem;
+  padding-top: 2rem;
 }
 
 .TTD-introo{
@@ -174,15 +227,18 @@ font-size: xx-large;
   gap:2rem;
   padding-inline: 20rem;
   padding-bottom:2rem;
+  padding-top: 2rem;
 }
 
+
 .contactus{
-  background-color: #DAD9D6;
+   background-image: url('https://res.cloudinary.com/minnivellir/image/upload/c_fill,g_north_east,z_10,w_1200,h_800,q_auto,f_auto/ICE_6248-copy-scaled_bj7lpl');
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding:1rem;
   padding-inline: 2rem;
+  gap:5rem;
 }
 
 .contactusText{
@@ -196,6 +252,7 @@ input{
   transition: background-color 0.3s ease;
   color:black;
   font-weight: 600;
+  padding:0.5rem;
 }
 
 input:hover{
@@ -209,7 +266,7 @@ input:hover{
   height:1.5rem;
 }
 .messTextfield{
-  padding-bottom:3rem;
+  padding-bottom:5rem;
   border:#0a0a0a solid 1px;
 }
 
@@ -244,3 +301,4 @@ input:hover{
   padding-top:1rem;
   
 }
+
