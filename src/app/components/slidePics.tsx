@@ -43,8 +43,8 @@ export default function Carousel() {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         setItems((data?.resources ?? []) as CloudinaryItem[]);
-      } catch (e: any) {
-        if (e?.name !== 'AbortError') setErr(e?.message ?? 'Failed to load images');
+      } catch (e) {
+        console.error(e);
       } finally {
         setLoading(false);
       }
