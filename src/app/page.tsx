@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Header from "./components/header";
 import Gallery from "./photos";
@@ -10,14 +11,27 @@ import FooterSlider from "./components/footerSlider";
 import Link from "next/link";
 import TTDcard from "./components/TTDcard";
 import LocationSection from "./components/locationSection";
+import Area from './components/area'
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage, lazyload, responsive, placeholder, AdvancedVideo } from "@cloudinary/react";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { dpr, format, quality } from "@cloudinary/url-gen/actions/delivery";
+import { auto as fAuto } from "@cloudinary/url-gen/qualifiers/format";
+import { auto as qAuto } from "@cloudinary/url-gen/qualifiers/quality";
+
+const cld = new Cloudinary({ cloud: { cloudName: 'minnivellir' } });
 
 export default function Home() {
+
+  
+ const myvideo = cld.video('HeroSection_nxtjsm');
   return (
      <div className="w-full">
+       
 
       <Header />
       {/* HERO SECTION */}
-      <section className="relative w-full h-screen">
+      <section id="home" className="relative w-full h-screen overflow-hidden">
        {/* <Image
           className="mynd"
           src="/image.png"
@@ -26,8 +40,13 @@ export default function Home() {
           style={{ objectFit: 'cover', boxShadow:'initial' }}
           priority
         />*/}
+        
+       <AdvancedVideo
+        cldVid={myvideo}
+        autoPlay muted loop playsInline
+         className="absolute inset-0 w-full h-full object-cover"
+      />
        
-        <video src="https://res.cloudinary.com/ddnepgvbc/video/upload/v1760094569/HeroSection_nxtjsm.mp4" autoPlay muted loop playsInline></video>
        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>*/}
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 flex items-center p-30 text-white bg-black/10 flex-col">
@@ -55,14 +74,14 @@ export default function Home() {
         { /*prófa neðra eftir gordon ramsey*/}
         
         <FadeInOnScroll>
-        <div className="slider-card">
-        <div id="farmhouse" className="slider-text">
+        <div id="farmhouse" className="slider-card">
+        <div  className="slider-text">
         <p  className="pb-5" >MINNI-VELLIR</p>
         <h1 className="text-4xl leading-relaxed" >The Farmhouse</h1>
         <h3 className="text-xl font-light leading-relaxed"> Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people. Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people.</h3>
         </div>  
    
-<div className="pt-0 mt-12 w-full max-w-5xl h-[300px] sm:h-[380px] md:h-[450px] shadow-xl overflow-hidden relative mx-auto">
+<div className="pt-0 mt-12 w-full max-w-5xl h-[320px] sm:h-[300px] md:h-[350px] shadow-xl overflow-hidden relative mx-auto">
   <Carousel />
 </div>
        </div></FadeInOnScroll>
@@ -70,26 +89,28 @@ export default function Home() {
 {/*ACCOMMODATION*/}
 <Accommodation ></Accommodation>
 
+<Area ></Area>
+
 
 {/*THINGS TO DO*/}
 <div className="TTD-prof-bg">
 <FadeInOnScroll>
-<div className="TTD-introo">
+<div id="TTD" className="TTD-introo">
 <h1 className="pb-0 pt-10 text-center">Things To Do</h1> 
 <h3 className="text-xl font-light leading-relaxed"> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h3>
 </div></FadeInOnScroll>
 
-<TTDcard title="Horseback riding" description=" Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else." imageFirst={true} />
-<TTDcard title="Bike rides" description="Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else." imageFirst={true} />
-<TTDcard title="Hiking" description="Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand." imageFirst={true} />
+<TTDcard title="Horseback riding" description=" Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
+<TTDcard title="Bike rides" description="Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
+<TTDcard title="Hiking" description="Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={true} />
   </div>
 
 {/*LOCATION*/}
-<LocationSection></LocationSection>
+<LocationSection ></LocationSection>
 
 {/*FOOTER SECTION MEÐ MYNDUM OG CONTACT US*/}
 <div className="footer">
-<FooterSlider></FooterSlider>
+{/*<FooterSlider></FooterSlider>*/}
 <div className="contactus">
   <div className="contactusText">
   <h1 style={{color:'black'}}>Contact us</h1>

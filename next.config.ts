@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",             // <-- enables static export
+              // <-- enables static export
   images: {
     // next/image optimization needs a server; for static export, turn it off
     unoptimized: true,

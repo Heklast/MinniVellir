@@ -16,16 +16,19 @@ export default function Header() {
 
   return (
     <header
-    style={{ backgroundColor: showLogo ? '#DAD9D6' : 'transparent' }}
+    style={{ backgroundColor: showLogo ? '#DAD9D6' : 'transparent' }} //kannski breyta um lit? er ekki að fýla þennan gráa en breytist kannski þegar myndir komnar
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
     >
-      <div className="flex items-center justify-between px-6 py-0">
+      <div className="flex items-center justify-between px-6 py-4">
         {/*Logo, MV*/}
         <div>
           {showLogo && (
-            <p style={{ fontFamily: 'Limelight', color:'#3D3935' }} className="text-3xl font-bold">
+            <a href="#home" style={{ fontFamily: 'Limelight', color:'#3D3935' }} className="text-3xl p-5 font-bold">
               MV
-            </p>
+            </a>
+            //<p href="#home" >
+              //MV
+            //</p>
           )}
         </div>
 <HamburgerMenu></HamburgerMenu>

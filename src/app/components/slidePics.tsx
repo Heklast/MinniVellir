@@ -1,64 +1,95 @@
 'use client';
-import 'keen-slider/keen-slider.min.css';
-import KeenSlider from 'keen-slider';
-import { useKeenSlider } from 'keen-slider/react';
-import { useState } from 'react';
-import  { useEffect } from 'react';
 
-const images = [
-  "/image.png",
- "/image.png",
-  "/image.png",
-];
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
+import { useEffect, useState } from 'react';
+
+type CloudinaryItem = {
+  public_id: string;
+  secure_url: string;
+  width: number;
+  height: number;
+  format: string;
+};
+
+// Insert transform after /upload/ (preserves folders/extension)
+function transformFromSecureUrl(secureUrl: string, w = 2400, h = 1600) {
+  const marker = '/upload/';
+  const i = secureUrl.indexOf(marker);
+  if (i === -1) return secureUrl;
+  const before = secureUrl.slice(0, i + marker.length);
+  const after = secureUrl.slice(i + marker.length);
+  return `${before}f_auto,q_auto,dpr_auto,c_fill,g_auto,w_${w},h_${h}/${after}`;
+}
 
 export default function Carousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [items, setItems] = useState<CloudinaryItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slideChanged(s) { setCurrentSlide(s.track.details.rel); },
     defaultAnimation: { duration: 2000 },
   });
 
-  // autoplay
+  // Fetch images by tag "fm" (or your tag)
   useEffect(() => {
+    const ac = new AbortController();
+    (async () => {
+      try {
+        setLoading(true);
+        setErr(null);
+        const res = await fetch('/api/images/by-tag/fm', { cache: 'no-store', signal: ac.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        setItems((data?.resources ?? []) as CloudinaryItem[]);
+      } catch (e: any) {
+        if (e?.name !== 'AbortError') setErr(e?.message ?? 'Failed to load images');
+      } finally {
+        setLoading(false);
+      }
+    })();
+    return () => ac.abort();
+  }, []);
+
+  // Autoplay
+  useEffect(() => {
+    if (!instanceRef.current) return;
     const id = setInterval(() => instanceRef.current?.next(), 5000);
     return () => clearInterval(id);
-  }, [instanceRef]);
+  }, [instanceRef, items.length]);
+
+  // Nudge layout when slides change or image loads
+  const handleImgLoad = () => instanceRef.current?.update();
+  useEffect(() => { instanceRef.current?.update(); }, [items.length]);
 
   return (
-    <div className="relative w-full h-full overflow-hidden"> {/* <-- NEW wrapper */}
-      <div ref={sliderRef} className="keen-slider w-full h-full">
-        {images.map((src, i) => (
-          <div key={i} className="keen-slider__slide basis-full shrink-0 w-full h-full">
-            <img src={src} alt={`Slide ${i + 1}`} className="block w-full h-full object-cover" />
-          </div>
-        ))}
-      </div>
+    // Wrapper inherits height from parent (NO bg-black)
+    <div className="relative w-full h-full overflow-hidden">
+      {/* Loading / Error overlays */}
+      {loading && <div className="absolute inset-0 grid place-items-center">Loading images…</div>}
+      {err && <div className="absolute inset-0 grid place-items-center text-red-600">Error: {err}</div>}
 
-      {/* Arrows */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-1">
-        <button onClick={() => instanceRef.current?.prev()}
-          className="w-10 h-10 flex items-center justify-center text-2xl bg-[rgba(200,140,120,0.6)] text-white hover:bg-[rgba(230,160,120,0.4)]">
-          &larr;
-        </button>
-        <button onClick={() => instanceRef.current?.next()}
-          className="w-10 h-10 flex items-center justify-center text-2xl bg-[rgba(200,140,120,0.6)] text-white hover:bg-[rgba(230,160,120,0.4)]">
-          &rarr;
-        </button>
-      </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => instanceRef.current?.moveToIdx(idx)}
-            className={`w-2.5 h-2.5 rounded-full ${
-              currentSlide === idx ? 'bg-[rgba(200,140,120,0.6)]' : 'bg-white'
-            }`}
-          />
-        ))}
-      </div>
+      {/* The slider fills the wrapper height exactly */}
+      {!loading && !err && items.length > 0 && (
+        <div ref={sliderRef} className="keen-slider absolute inset-0 w-full h-full">
+          {items.map((it) => {
+            const url = transformFromSecureUrl(it.secure_url, 1920, 1080);
+            return (
+              <div key={it.public_id} className="keen-slider__slide relative w-full h-full">
+                {/* Absolutely fill each slide to avoid any gap */}
+                <img
+                  src={url}
+                  alt={it.public_id.split('/').pop() ?? 'Slide'}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onLoad={handleImgLoad}
+                  loading="lazy"
+                />
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

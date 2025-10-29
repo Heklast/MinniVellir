@@ -50,7 +50,7 @@ export default function HamburgerMenu() {
             <a href="#area" onClick={() => setIsOpen(false)}>
               The Area
             </a>
-            <a href="#thingsToDo" onClick={() => setIsOpen(false)}>
+            <a href="#TTD" onClick={() => setIsOpen(false)}>
               Things To Do
             </a>
             <a href="#location" onClick={() => setIsOpen(false)}>
