@@ -1,10 +1,10 @@
+// app/api/images/by-tag/[tag]/route.ts
 import { NextResponse } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// Configure Cloudinary
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
   api_key: process.env.CLOUDINARY_API_KEY!,
@@ -13,13 +13,13 @@ cloudinary.config({
 
 export async function GET(
   _req: Request,
-  { params }: { params: { tag: string } }
+  { params }: { params: Promise<{ tag: string }> } // 👈 match RouteContext
 ) {
   try {
-    const tag = decodeURIComponent(params.tag);
-    console.log("[Cloudinary] Fetching images by tag:", tag);
+    const { tag } = await params; // 👈 works whether it's a Promise or a plain object
+    const decoded = decodeURIComponent(tag);
 
-    const result = await cloudinary.api.resources_by_tag(tag, {
+    const result = await cloudinary.api.resources_by_tag(decoded, {
       max_results: 100,
     });
 
@@ -32,11 +32,8 @@ export async function GET(
       tags: r.tags,
     }));
 
-    console.log(`[Cloudinary] Found ${resources.length} images for tag ${tag}`);
-
     return NextResponse.json({ resources });
   } catch (err: any) {
-    console.error("[Cloudinary error]", err);
     return NextResponse.json(
       { error: err?.message ?? "Cloudinary error" },
       { status: 500 }
