@@ -22,7 +22,7 @@ body {
 
 @font-face {
   font-family: 'Limelight';
-  src: url('../../public/Limelight-Regular.ttf') format('truetype');
+  src: url('/Limelight-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -30,21 +30,21 @@ body {
 
 @font-face {
   font-family: 'Julius';
-  src: url('../../public/JuliusSansOne-Regular.ttf') format('truetype');
+  src: url('/JuliusSansOne-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Jura';
-  src: url('../../public/Jura-VariableFont_wght.ttf') format('truetype');
+  src: url('/Jura-VariableFont_wght.ttf') format('truetype');
   font-weight:bolder;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Baskerville';
-  src: url('../../public/Baskervville-VariableFont_wght.ttf') format('truetype');
+  src: url('/Baskervville-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -52,7 +52,7 @@ body {
 
 @font-face {
   font-family: 'Garamond';
-  src: url('../../public/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  src: url('/EBGaramond-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
