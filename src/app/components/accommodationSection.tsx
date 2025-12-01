@@ -192,10 +192,15 @@ export default function Accommodation() {
           {!loading && !err && items.length > 0 && (
             <div className="flex flex-row gap-20 pr-10 items-start">
               <div className="accommodation-2">
-                <h1>Accommodation</h1>
+                <h1>Ammenities</h1>
                 <h3 className="text-xl font-light leading-relaxed">
-                  The house can accommodate up to 10 people, it has all necessities to enjoy your time there with
-                  cooking, relaxing and sleeping.
+                  The farmhouse comfortably accommodates up to six guests in three bedrooms, each thoughtfully furnished to create a warm and restful atmosphere. The spacious double living room
+                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, share stories by the fireplace, or simply take in the peaceful views across the fields. <br /><br />
+
+                  The fully equipped kitchen has everything you need to prepare meals, from morning coffee to hearty dinners after a day of exploration. The house also features two modern bathrooms,
+                  ensuring comfort and convenience for families and small groups alike. <br /><br />
+
+                  Blending traditional charm with modern comfort, the farmhouse provides the perfect balance between authenticity and relaxation — a welcoming home base for your adventures in southern Iceland.
                 </h3>
               </div>
 

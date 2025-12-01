@@ -1,71 +1,103 @@
-//import {nodemailer} from 'nodemailer' //gera npm install nodemailer þegar komin í net
+"use client";
 
+import { useState } from "react";
 
 export default function ContactUs() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName]  = useState("");
+  const [email, setEmail]        = useState("");
+  const [message, setMessage]    = useState("");
+  const [status, setStatus]      = useState<null | "sending" | "sent" | "error">(null);
+  const[empty,setEmpty]          = useState(false);
 
-  const EMAIL_PASS= process.env.EMAIL_PASS;
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setEmpty(false);
+    setStatus("sending");
 
+    if(firstName==="" || lastName==="" || email==="" || message===""){
+      setEmpty(true);
+      setStatus(null);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contactUs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email, message }),
+      });
+      
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+    //  setSent(true);
+
+
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("sent");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  }
 
   return (
     <div id="contactUs" className="flex flex-col md:flex-row items-start gap-4 md:gap-8 w-full">
       {/* Form */}
-      <form className="flex flex-col flex-1 gap-4">
-        {/* Name fields side-by-side on md+ */}
+      <form className="flex flex-col flex-1 gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:flex-row gap-4 w-full">
           <div className="flex flex-col flex-1">
-            <label className="text-black">First Name</label>
-            <input className="textfield" />
+            <label className="text-white">First Name</label>
+            <input
+              className="textfield"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
           </div>
           <div className="flex flex-col flex-1">
-            <label className="text-black">Last Name</label>
-            <input className="textfield" />
+            <label className="text-white">Last Name</label>
+            <input
+              className="textfield"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
           </div>
         </div>
 
         <div className="flex flex-col">
-          <label className="text-black">Email</label>
-          <input className="textfield" />
+          <label className="text-white">Email</label>
+          <input
+            className="textfield"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
 
         <div className="flex flex-col">
-          <label className="text-black">Message</label>
-          <input className="messTextfield" /> {/*Hér var textarea, man ekki afh tbh*/}
+          <label className="text-white">Message</label>
+          <textarea
+            className="messTextfield"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </div>
-      </form>
+        <div className="flex flex-row space-between items-center justify-between ">
+        {(status === null || status==="sending")  && empty===false && <p className="text-white"></p>}
+        {status === "sent" && <p className="text-white">Your message was successfully sent, we will be in touch within a couple days!</p>}
+        {status === "error" && <p className="text-white">Something went wrong, please try again later.</p>}
+        {empty === true && <p className="text-white">You need to fill in all fields.</p>}
 
-      {/* Button on the right (below on mobile) */}
-      <button /*onClick={sendMail()}*/ className="TTD-button self-start md:self-end"> Send</button>
+        <button
+          type="submit"
+          className="TTD-button self-start md:self-end"
+          disabled={status === "sending"}
+        >
+          {status === "sending" ? "Sending..." : "Send"}
+        </button></div>
+      </form>
     </div>
   );
-
-  function checkIntegrity(){
-
-  }
- {/*
-function MouseEventHandler<HTMLButtonElement> sendMail(){
-  checkIntegrity();
-
-const transporter =nodemailer.createTransport({
-  service: 'gmail',
-  auth:{
-    user: 'heklast@gmail.com',
-    pass: EMAIL_PASS //eg er ekki með neinn email_pass rn, þarf að bæta við, en þá vænt f minnivallaremailið?
-  }
-});
-
-  const mail={
-    from:'heklast@gmail.com',
-    to: 'heklast@gmail.com',
-    subject: 'Rezdy webhook!!!',
-    text:'Rezdy webhook yayy!!!'
-  };
-  transporter.sendMail(mail, (error,info)=>{
-    if (error){
-      console.error("emial error:",error);
-    } else{
-      console.log("Email sent!! info:", info);
-    }
-  });
-} */
-}
 }

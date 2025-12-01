@@ -36,7 +36,7 @@ export default function TTDcard({
             {description}
           </h3>
           <h3 className="text-lg md:text-xl font-light leading-relaxed">
-            Let us know if you want to go {title.toLowerCase()}!
+            Contact us for more info!
           </h3>
           <button className="TTD-button bg-[#3D3935] text-white px-6 py-2 rounded-md mt-4 hover:bg-[#5a554f] transition">
             <a href="#contactUs">Contact us</a>

@@ -74,17 +74,28 @@ export default function Home() {
         { /*prófa neðra eftir gordon ramsey*/}
         
         <FadeInOnScroll>
-        <div id="farmhouse" className="slider-card">
-        <div  className="slider-text">
-        <p  className="pb-5" >MINNI-VELLIR</p>
-        <h1 className="text-4xl leading-relaxed" >The Farmhouse</h1>
-        <h3 className="text-xl font-light leading-relaxed"> Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people. Minni-Vellir Farmhouse offers comfortable accommodation for up to 10 people.</h3>
-        </div>  
-   
-<div className="pt-0 mt-12 w-full max-w-5xl h-[320px] sm:h-[300px] md:h-[350px] shadow-xl overflow-hidden relative mx-auto">
-  <Carousel />
-</div>
-       </div></FadeInOnScroll>
+       <div id="farmhouse" className="slider-card">
+  <div className="slider-text">
+    <p className="pb-5">MINNI-VELLIR</p>
+    <h1 className="text-4xl leading-relaxed">The Farmhouse</h1>
+    <p className="text-xl font-light leading-relaxed">
+      
+      According to ancient tales, the Minni-Vellir farm in Landsveit was first
+      settled around 900 AD and has been inhabited, more-or-less continuously,
+      ever since. The last residents of the old farmhouse were two brothers and
+      their sister, who lived here for over fifty years, caring for the land and
+      keeping its quiet traditions alive. <br /><br />
+      The recently renovated farmhouse preserves its authentic charm while
+      offering modern comfort and coziness. Inside, you’ll find a warm and
+      inviting atmosphere — perfect for relaxing after a day of exploring the
+      natural wonders of southern Iceland.
+    </p>
+  </div>
+
+  <div className="w-full h-[320px] sm:h-[300px] md:h-[350px] shadow-xl overflow-hidden relative">
+    <Carousel />
+  </div>
+</div></FadeInOnScroll>
 
 {/*ACCOMMODATION*/}
 <Accommodation ></Accommodation>
@@ -100,9 +111,9 @@ export default function Home() {
 <h3 className="text-xl font-light leading-relaxed"> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h3>
 </div></FadeInOnScroll>
 
-<TTDcard title="Horseback riding" description=" Go horseback riding in the area with our partner íshestar. You decide the journey, length and sightsees with a tour guide from íshestar. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
-<TTDcard title="Bike rides" description="Explore the area on mountain bikes with our partner Bikes. You decide the journey, length and sightsees with a tour guide from Bikes. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
-<TTDcard title="Hiking" description="Go on hikes on one of the beautiful mountains that surround the area with our dear friend Dóra. Dóra lives in the neighbourhood and knows all the mountains like the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={true} />
+<TTDcard title="Horseback riding" description=" Go horseback riding in the area with our partner Íshestar. You decide the journey, length and sightsees with a tour guide from Íshestar. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
+<TTDcard title="Bike rides" description="Explore the area on e-mountain bikes with our partner the Bike company." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
+<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend Dóra. Dóra is our next-door neighbour and knows all the mountains like the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
   </div>
 
 {/*LOCATION*/}
@@ -113,8 +124,8 @@ export default function Home() {
 {/*<FooterSlider></FooterSlider>*/}
 <div className="contactus">
   <div className="contactusText">
-  <h1 style={{color:'black'}}>Contact us</h1>
-  <h3 className="text-xl font-light leading-relaxed" style={{color:'black'}}> Please contact us for bookings and/or if you have any questions.</h3>
+  <h1 style={{color:'white'}}>Contact us</h1>
+  <h3 className="text-xl font-light leading-relaxed" style={{color:'white', fontWeight:'bold'}}> Please contact us for bookings and/or if you have any questions.</h3>
   </div><ContactUs></ContactUs>
 </div>
 </div>

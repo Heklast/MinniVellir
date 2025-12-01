@@ -19,7 +19,7 @@ export default function LocationSection() {
         <div className="loc-text">
            <p className="pb-5">SOUTH ICELAND</p>
           <h1 className="text-4xl leading-relaxed" >Location</h1>
-        <h3 className="text-xl font-light leading-relaxed" >Located in the South of Iceland at the heart of the farmers side of Iceland, Minni-Vellir provides guests with a beautiful scenery, pristine rivers, mountains and lands all around.   </h3>
+        <h3 className="text-xl font-light leading-relaxed" >Minni-Vellir, a beautifully renovated farmhouse dating back to Iceland’s early settlement around 900 AD. With cozy rooms, modern comforts, and sweeping views of the countryside, it’s the perfect base for exploring southern Iceland, main sights as well as hidden gems like Þjófafoss and Háifoss.   </h3>
         </div>
         </div>
 </FadeInOnScroll>);}

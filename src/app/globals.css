@@ -60,27 +60,48 @@ body {
 
 img, video, canvas { max-width: 100%; height: auto; display: block; }
 
-.slider-card{
+.slider-card {
   padding: 2rem;
   padding-bottom: 5rem;
   padding-top: 5rem;
-  padding-right:0;
-  display:flex;
+  padding-right: 0;
+  display: flex;
   flex-direction: row;
-  gap:2rem;
+  gap: 2rem;
+  align-items: stretch;      /* make both columns same height */
 }
 
-.slider-text{
+/* Text column */
+.slider-text {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+
+  flex: 1 1 0;               /* grow and shrink, base 0 */
+  max-width: 45rem;          /* keep line length reasonable (≈ 70–80 chars) */
 }
 
+/* Carousel column (the div wrapping the Carousel) */
+.slider-card > .slider-text + div {
+  flex: 1 1 0;               /* share remaining space with text */
+  min-width: 320px;          /* prevent it from becoming tiny */
+}
+
+/* On small screens stack them, so both are full-width */
 @media (max-width: 700px) {
   .slider-card {
     flex-direction: column;
+  }
+
+  .slider-text {
+    max-width: 100%;
+  }
+
+  .slider-card > .slider-text + div {
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -153,7 +174,7 @@ font-size: xx-large;
   padding-bottom: 5rem;
   padding-top: 0rem;
   display:flex;
-  flex-direction: row;
+  
   gap:3rem;
   width:auto;
  
@@ -232,7 +253,7 @@ font-size: xx-large;
 
 
 .contactus{
-   background-image: url('https://res.cloudinary.com/minnivellir/image/upload/c_fill,g_north_east,z_10,w_1200,h_800,q_auto,f_auto/ICE_6248-copy-scaled_bj7lpl');
+   background-image: url('https://res.cloudinary.com/minnivellir/image/upload/c_fill,g_north_east,z_10,w_1200,h_800,q_auto,f_auto/ICE_1966_8113_copy_kvdgoy');
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -264,10 +285,13 @@ input:hover{
   padding:0.5rem;
   border:#0a0a0a solid 1px;
   height:1.5rem;
+  opacity: 0.7;
 }
 .messTextfield{
   padding-bottom:5rem;
   border:#0a0a0a solid 1px;
+  background-color: white;
+  opacity: 0.7;
 }
 
 .contact{

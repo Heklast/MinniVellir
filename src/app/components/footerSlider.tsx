@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-//örvarnar hér sjást eiginlega ekmkert, hmmmm
+//örvarnar hér sjást eiginlega ekmkert, hmmmm, ég er ekkert að nota þetta núna
 
 
 export default function FooterSlider() {
