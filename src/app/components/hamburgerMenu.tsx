@@ -36,7 +36,7 @@ export default function HamburgerMenu() {
 
       {/* Sidebar menu */}
       {isOpen && (
-        <div className="fixed top-0 right-0 h-screen w-1/4 bg-white flex flex-col items-center justify-center shadow-lg z-40">
+        <div className="fixed top-0 right-0 h-screen md:w-1/4 w-full bg-white flex flex-col items-center justify-center shadow-lg z-40">
           <nav
             style={{ fontFamily: "Garamond" }}
             className="flex flex-col gap-6 text-xl text-black"

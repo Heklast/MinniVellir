@@ -144,21 +144,21 @@ export default function Accommodation() {
           />
 
           <div className="TTD-intro">
-            <h1 className="pb-0 text-center">The House in all its Glory</h1>
+            <h1 className="pb-0 md:text-center">The old farmhouse</h1>
             <h3 className="text-xl font-light leading-relaxed pb-10">
-              A sneakpeek into the cozy farmhouse that Minni-Vellir Farmhouse is.
+              A sneakpeak into the cozy farmhouse that Minni-Vellir Farmhouse is.
             </h3>
           </div>
 
-          {loading && <div className="py-8">Loading images…</div>}
-          {err && <div className="py-8 text-red-600">Error: {err}</div>}
+          {loading && <div>Loading images…</div>}
+          {err && <div className=" text-red-600">Error: {err}</div>}
 
           {/* Slider (taller for better fit) */}
           {!loading && !err && items.length > 0 && imagesLoaded && (
             <div
               key={`keen-${items.length}`}
               ref={sliderRef}
-              className="keen-slider w-full h-[560px] relative"
+              className="keen-slider w-full md:h-[560px]  relative"
             >
               {items.map((it, i) => {
                 const url = transformFromSecureUrl(it.secure_url, targetW, targetH);
@@ -185,17 +185,17 @@ export default function Accommodation() {
           )}
 
           {!loading && !err && items.length === 0 && (
-            <div className="py-8 text-gray-500">No images with tag “accom” yet.</div>
+            <div className=" text-gray-500">No images with tag “accom” yet.</div>
           )}
 
           {/* Controls */}
           {!loading && !err && items.length > 0 && (
-            <div className="flex flex-row gap-20 pr-10 items-start">
+            <div className="flex flex-col-reverse md:flex-row md:gap-20 gap-2 md:pr-10 pr-5 items-start">
               <div className="accommodation-2">
-                <h1>Ammenities</h1>
+                <h1>Amenities</h1>
                 <h3 className="text-xl font-light leading-relaxed">
                   The farmhouse comfortably accommodates up to six guests in three bedrooms, each thoughtfully furnished to create a warm and restful atmosphere. The spacious double living room
-                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, share stories by the fireplace, or simply take in the peaceful views across the fields. <br /><br />
+                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, or simply take in the peaceful views across the fields. <br /><br />
 
                   The fully equipped kitchen has everything you need to prepare meals, from morning coffee to hearty dinners after a day of exploration. The house also features two modern bathrooms,
                   ensuring comfort and convenience for families and small groups alike. <br /><br />

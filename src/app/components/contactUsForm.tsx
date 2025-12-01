@@ -47,17 +47,17 @@ export default function ContactUs() {
   return (
     <div id="contactUs" className="flex flex-col md:flex-row items-start gap-4 md:gap-8 w-full">
       {/* Form */}
-      <form className="flex flex-col flex-1 gap-4" onSubmit={handleSubmit}>
-        <div className="flex flex-col sm:flex-row gap-4 w-full">
-          <div className="flex flex-col flex-1">
-            <label className="text-white">First Name</label>
+      <form className="flex flex-col w-full md:flex-1 gap-4" onSubmit={handleSubmit}>
+        <div className="flex flex-col md:flex-row gap-4 w-full">
+          <div className="flex flex-col w-full md:flex-1">
+            <label className="text-white w-full">First Name</label>
             <input
-              className="textfield"
+              className="textfield w-full"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
-          <div className="flex flex-col flex-1">
+          <div className="flex flex-col w-full md:flex-1">
             <label className="text-white">Last Name</label>
             <input
               className="textfield"

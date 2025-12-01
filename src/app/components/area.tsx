@@ -42,7 +42,7 @@ export default function Area() {
     <FadeInOnScroll>
       <div id="area" className="pl-10">
         <div className="pb-10"></div>
-        <div className="flex flex-col items-center gap-4 w-full">
+        <div className="flex flex-col md:items-center gap-4 w-full">
           {/* Lightbox */}
           <Lightbox
             open={lightboxIndex >= 0}
@@ -57,11 +57,11 @@ export default function Area() {
           />
 
           <div className='TTD-intro'>
-            <h1 className="pb-0 text-center">The Area</h1>
+            <h1 className="pb-0 md:text-center">The Area</h1>
             
           </div>
           {/* SLIDER */}
-          <div ref={sliderRef} className="keen-slider w-full h-130 relative">
+          <div ref={sliderRef} className="keen-slider w-full md:h-130 relative">
             {images.map((img, i) => (
               <div
                 key={i}
@@ -83,16 +83,16 @@ export default function Area() {
           {/* CONTROLS */}
 
           <FadeInOnScroll>
-            <div className="flex flex-row gap-20 pr-10 items-start">
+            <div className="flex flex-col-reverse md:flex-row md:gap-20 gap-5 pr-5 md:pr-10 items-start">
 
               <div className='accommodation-2'>
                 <h3 className="text-xl font-light leading-relaxed">
-                  Minni-Vellir is perfectly situated for exploring some of southern Iceland’s most stunning natural attractions. Within short driving distances you have local favorites and hidden gems
-                  like Þjófafoss and Háifoss, and within a 100 km, you can reach many of the country’s most beloved destinations — including the Golden Circle highlights: Gullfoss waterfall, Geysir hot
-                  springs, and Þingvellir National Park.<br /><br />
+                  Situated in the heart of the farmland of the South of Iceland, Minni vellir is conveniently located to explore
+                  many of southern Iceland's stunning natural attractions. Within short driving distances you have local favorites and hidden gems
+                  like Þjófafoss and Háifoss.<br /><br />
 
                   Adventurous travelers can also venture to the colorful rhyolite mountains of Landmannalaugar, the powerful Hekla volcano, and the lush
-                  Þórsmörk valley, all within easy driving distance.<br /><br />
+                  Þórsmörk valley and even Sólheimasandur and Vík, all within easy driving distance.<br /><br />
 
                   Closer to the farm, quiet country roads and open landscapes invite peaceful walks, photography, and a glimpse into the timeless rhythm of rural Icelandic life. Whether you’re exploring or simply unwinding, Minni-Vellir offers the ideal base in the heart of the south.
                 </h3>

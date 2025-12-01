@@ -14,7 +14,7 @@ export default function TTDcard({
   return (
     <FadeInOnScroll>
       <div
-        className={`TTD-card flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-12 py-16 ${
+        className={`TTD-card flex flex-col md:flex-row md:items-center items-center justify-center gap-4 md:gap-16 px-6 md:px-12 py-16 ${
           imageFirst ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
@@ -29,7 +29,7 @@ export default function TTDcard({
 
         {/* TEXT SIDE */}
         <div className="TTD-text w-full md:w-1/2 text-center md:text-left flex flex-col justify-center items-center md:items-start gap-4">
-          <h1 className="text-3xl md:text-4xl leading-relaxed font-semibold">
+          <h1 className="text-xl md:text-4xl leading-relaxed font-semibold">
             {title}
           </h1>
           <h3 className="text-lg md:text-xl font-light leading-relaxed">

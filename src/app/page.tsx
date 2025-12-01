@@ -31,7 +31,7 @@ export default function Home() {
 
       <Header />
       {/* HERO SECTION */}
-      <section id="home" className="relative w-full h-screen overflow-hidden">
+      <section id="home" className="relative w-full h-screen md:overflow-hidden">
        {/* <Image
           className="mynd"
           src="/image.png"
@@ -44,21 +44,21 @@ export default function Home() {
        <AdvancedVideo
         cldVid={myvideo}
         autoPlay muted loop playsInline
-         className="absolute inset-0 w-full h-full object-cover"
+         className="hero"
       />
        
        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>*/}
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 flex items-center p-30 text-white bg-black/10 flex-col">
         <h2 style={{ fontFamily: 'Limelight' }} className="text-7xl font-bold ">MV</h2>
-        <h2 style={{ fontFamily: 'Julius' }} className="text-[20px]">Minni-Vellir Farmhouse</h2>
-        <h2 style={{ fontFamily: 'Julius' }} className="text-[20px]">Experience the South of Iceland</h2>
+        <h2 style={{ fontFamily: 'Julius' }} className="text-[20px] text-center md:text-[20px]">Minni-Vellir Farmhouse</h2>
+        <h2 style={{ fontFamily: 'Julius' }} className="text-[15px] text-center md:text-[20px]">Experience the South of Iceland</h2>
       </div>
        </section>
       
        <div className="p-5" style={{backgroundColor:'#DAD9D6'}}>
          <div className="bordertexti">
-        <h2 style={{fontFamily:"Garamond", fontSize:"20px"}}>Minni Vellir Farmhouse - 851 Hella - Iceland</h2>
+        <h2 style={{fontFamily:"Garamond", fontSize:"15px"} } className="text-[20px]">Minni Vellir Farmhouse - 851 Hella - Iceland</h2>
         <h3 style={{fontFamily:"Garamond"}}>minnivellir@gmail.com</h3></div>
         </div>
        <section style={{fontFamily:'Garamond',color:'#3D3935'}}>
@@ -74,7 +74,7 @@ export default function Home() {
         { /*prófa neðra eftir gordon ramsey*/}
         
         <FadeInOnScroll>
-       <div id="farmhouse" className="slider-card">
+       <div id="farmhouse" className="slider-card flex flex-col-reverse md:flex-row">
   <div className="slider-text">
     <p className="pb-5">MINNI-VELLIR</p>
     <h1 className="text-4xl leading-relaxed">The Farmhouse</h1>
@@ -92,7 +92,7 @@ export default function Home() {
     </p>
   </div>
 
-  <div className="w-full h-[320px] sm:h-[300px] md:h-[350px] shadow-xl overflow-hidden relative">
+  <div className="w-full h-[320px] md:h-[350px] shadow-xl overflow-hidden relative">
     <Carousel />
   </div>
 </div></FadeInOnScroll>
@@ -106,8 +106,9 @@ export default function Home() {
 {/*THINGS TO DO*/}
 <div className="TTD-prof-bg">
 <FadeInOnScroll>
-<div id="TTD" className="TTD-introo">
-<h1 className="pb-0 pt-10 text-center">Things To Do</h1> 
+<div id="TTD" className="TTD-introo pl-10 pr-5 md:pr-20 md:pl-20 md:py-2"
+  >
+<h1 className="pb-0 pt-10 md:text-center">Things To Do</h1> 
 <h3 className="text-xl font-light leading-relaxed"> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h3>
 </div></FadeInOnScroll>
 
@@ -121,13 +122,18 @@ export default function Home() {
 
 {/*FOOTER SECTION MEÐ MYNDUM OG CONTACT US*/}
 <div className="footer">
-{/*<FooterSlider></FooterSlider>*/}
-<div className="contactus">
-  <div className="contactusText">
-  <h1 style={{color:'white'}}>Contact us</h1>
-  <h3 className="text-xl font-light leading-relaxed" style={{color:'white', fontWeight:'bold'}}> Please contact us for bookings and/or if you have any questions.</h3>
-  </div><ContactUs></ContactUs>
-</div>
+  <div className="contactus  md:flex-row flex flex-col gap-8 md:items-start">
+    <div className="contactusText w-full md:w-1/2 space-y-4">
+      <h1 className="text-white text-3xl md:text-4xl font-semibold">Contact us</h1>
+      <h3 className="text-white text-base md:text-lg font-light leading-relaxed">
+        Please contact us for bookings and/or if you have any questions.
+      </h3>
+    </div>
+
+    <div className="w-full md:w-1/2">
+      <ContactUs />
+    </div>
+  </div>
 </div>
 
       </div>

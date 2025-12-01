@@ -64,32 +64,39 @@ export default function Carousel() {
   useEffect(() => { instanceRef.current?.update(); }, [items.length]);
 
   return (
-    // Wrapper inherits height from parent (NO bg-black)
-    <div className="relative w-full h-full overflow-hidden">
-      {/* Loading / Error overlays */}
-      {loading && <div className="absolute inset-0 grid place-items-center">Loading images…</div>}
-      {err && <div className="absolute inset-0 grid place-items-center text-red-600">Error: {err}</div>}
+    <div className="relative w-full h-[320px] md:h-[350px] overflow-hidden">
+    {loading && (
+      <div className="absolute inset-0 grid place-items-center text-white">
+        Loading images…
+      </div>
+    )}
+    {err && (
+      <div className="absolute inset-0 grid place-items-center text-red-500">
+        Error: {err}
+      </div>
+    )}
 
-      {/* The slider fills the wrapper height exactly */}
-      {!loading && !err && items.length > 0 && (
-        <div ref={sliderRef} className="keen-slider absolute inset-0 w-full h-full">
-          {items.map((it) => {
-            const url = transformFromSecureUrl(it.secure_url, 1920, 1080);
-            return (
-              <div key={it.public_id} className="keen-slider__slide relative w-full h-full">
-                {/* Absolutely fill each slide to avoid any gap */}
-                <img
-                  src={url}
-                  alt={it.public_id.split('/').pop() ?? 'Slide'}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onLoad={handleImgLoad}
-                  loading="lazy"
-                />
-              </div>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
+    {!loading && !err && items.length > 0 && (
+      <div ref={sliderRef} className="keen-slider w-full h-full">
+        {items.map((it) => {
+          const url = transformFromSecureUrl(it.secure_url, 1920, 1080);
+          return (
+            <div
+              key={it.public_id}
+              className="keen-slider__slide w-full h-full"
+            >
+              <img
+                src={url}
+                alt={it.public_id.split('/').pop() ?? 'Slide'}
+                className="w-full h-full object-cover block"
+                onLoad={handleImgLoad}
+                loading="lazy"
+              />
+            </div>
+          );
+        })}
+      </div>
+    )}
+  </div>
+);
 }

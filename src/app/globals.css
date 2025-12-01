@@ -58,15 +58,33 @@ body {
   font-display: swap;
 }
 
-img, video, canvas { max-width: 100%; height: auto; display: block; }
+.hero {
+  position: absolute;
+  inset: 0;        
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+img, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* leave video separate, we already fixed hero video */
+video {
+  max-width: 100%;
+  display: block;
+}
 
 .slider-card {
   padding: 2rem;
   padding-bottom: 5rem;
   padding-top: 5rem;
   padding-right: 0;
-  display: flex;
-  flex-direction: row;
+  
   gap: 2rem;
   align-items: stretch;      /* make both columns same height */
 }
@@ -139,13 +157,9 @@ font-weight:500;
 letter-spacing:0.1em;
 font-size: xx-large;
 }
+
 .loc-card{
-  padding-left: 2rem;
-  padding-right:5rem;
-  padding-bottom: 3rem;
-  padding-top: 5rem;
-  display:flex;
-  flex-direction: row;
+  
   gap:3rem;
   width:auto;
 }
@@ -169,13 +183,8 @@ font-size: xx-large;
 
 
 .TTD-card{
-  padding-left: 2rem;
-  padding-right:5rem;
-  padding-bottom: 5rem;
-  padding-top: 0rem;
+
   display:flex;
-  
-  gap:3rem;
   width:auto;
  
 }
@@ -238,24 +247,18 @@ font-size: xx-large;
   display: flex;
   flex-direction: column;
   gap:2rem;
-  padding-inline: 15rem;
-  padding-top: 2rem;
 }
 
 .TTD-introo{
   display: flex;
   flex-direction: column;
   gap:2rem;
-  padding-inline: 20rem;
-  padding-bottom:2rem;
-  padding-top: 2rem;
 }
 
 
 .contactus{
    background-image: url('https://res.cloudinary.com/minnivellir/image/upload/c_fill,g_north_east,z_10,w_1200,h_800,q_auto,f_auto/ICE_1966_8113_copy_kvdgoy');
-  display: flex;
-  flex-direction: row;
+  
   justify-content: space-between;
   padding:1rem;
   padding-inline: 2rem;
@@ -286,19 +289,21 @@ input:hover{
   border:#0a0a0a solid 1px;
   height:1.5rem;
   opacity: 0.7;
+  width: 100%;
 }
 .messTextfield{
   padding-bottom:5rem;
-  border:#0a0a0a solid 1px;
+  border:#251a1a solid 1px;
   background-color: white;
   opacity: 0.7;
+  
 }
 
 .contact{
   display: flex;
   flex-direction: column;
   gap:3;
-  width:fit-content;
+  width:100%;
   padding: 0rem;
 }
 

@@ -4,8 +4,8 @@ export default function LocationSection() {
     return (
 <FadeInOnScroll>
 
-<div id="location" className="loc-card ">
-  <div className="loc-image">
+<div id="location" className="loc-card flex flex-col pl-5 pr-1 md:pl-2 md:pr-5 md:pb-3 md:pt-5 md:flex-row gap-3 w-auto">
+  <div className="loc-image md:h-30">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1749.9376583668693!2d-20.22119742317767!3d63.98535687719389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d6ea3b46186fc1%3A0x3d0b3160ae87163c!2sMinni%20Vellir%20Farmhouse!5e0!3m2!1sen!2sis!4v1753712914686!5m2!1sen!2sis" 
           width="800" 
           height="800" 
