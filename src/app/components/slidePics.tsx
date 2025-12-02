@@ -64,31 +64,21 @@ export default function Carousel() {
   useEffect(() => { instanceRef.current?.update(); }, [items.length]);
 
   return (
-    <div className="relative w-full h-[320px] md:h-[350px] overflow-hidden">
-    {loading && (
-      <div className="absolute inset-0 grid place-items-center text-white">
-        Loading images…
-      </div>
-    )}
-    {err && (
-      <div className="absolute inset-0 grid place-items-center text-red-500">
-        Error: {err}
-      </div>
-    )}
-
+  
+  <div className="relative w-full overflow-hidden">
     {!loading && !err && items.length > 0 && (
-      <div ref={sliderRef} className="keen-slider w-full h-full">
+      <div ref={sliderRef} className="keen-slider w-full">
         {items.map((it) => {
           const url = transformFromSecureUrl(it.secure_url, 1920, 1080);
           return (
             <div
               key={it.public_id}
-              className="keen-slider__slide w-full h-full"
+              className="keen-slider__slide w-full"
             >
               <img
                 src={url}
                 alt={it.public_id.split('/').pop() ?? 'Slide'}
-                className="w-full h-full object-cover block"
+                className="w-full aspect-[4/3] object-cover block"
                 onLoad={handleImgLoad}
                 loading="lazy"
               />
@@ -98,5 +88,4 @@ export default function Carousel() {
       </div>
     )}
   </div>
-);
-}
+);}

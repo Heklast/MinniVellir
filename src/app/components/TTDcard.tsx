@@ -7,7 +7,7 @@ export default function TTDcard({
   imageFirst,
 }: {
   title: string;
-  description: string;
+  description: any;
   imageSrc: string;
   imageFirst: boolean;
 }) {
@@ -39,7 +39,7 @@ export default function TTDcard({
             Contact us for more info!
           </h3>
           <button className="TTD-button bg-[#3D3935] text-white px-6 py-2 rounded-md mt-4 hover:bg-[#5a554f] transition">
-            <a href="#contactUs">Contact us</a>
+            <a href="#contactUs">Contact us for more info</a>
           </button>
         </div>
       </div>

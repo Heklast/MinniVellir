@@ -76,7 +76,7 @@ export default function Home() {
         <FadeInOnScroll>
        <div id="farmhouse" className="slider-card flex flex-col-reverse md:flex-row">
   <div className="slider-text">
-    <p className="pb-5">MINNI-VELLIR</p>
+    
     <h1 className="text-4xl leading-relaxed">The Farmhouse</h1>
     <p className="text-xl font-light leading-relaxed">
       
@@ -92,7 +92,7 @@ export default function Home() {
     </p>
   </div>
 
-  <div className="w-full h-[320px] md:h-[350px] shadow-xl overflow-hidden relative">
+  <div className="w-full h-[320px] md:h-[350px] shadow-xl overflow-hidden relative m-5 ">
     <Carousel />
   </div>
 </div></FadeInOnScroll>
@@ -112,9 +112,21 @@ export default function Home() {
 <h3 className="text-xl font-light leading-relaxed"> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h3>
 </div></FadeInOnScroll>
 
-<TTDcard title="Horseback riding" description=" Go horseback riding in the area with our partner Íshestar. You decide the journey, length and sightsees with a tour guide from Íshestar. We provide everything else." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
-<TTDcard title="Bike rides" description="Explore the area on e-mountain bikes with our partner the Bike company." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
-<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend Dóra. Dóra is our next-door neighbour and knows all the mountains like the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
+<TTDcard title="Horseback riding" description={ <>
+      Explore the area on horseback with our partner, Íshestar.  The area is reputed for the quality and variety of its riding paths.  Regardless of your riding experience, our partner Íshestar  (
+      <a href="https://ishestar.is" target="_blank" rel="noopener noreferrer">
+        ishestar.is
+      </a> 
+      ) will help provide an unforgettable experience.  You decide the length and pace of the ride with a tour guide and Íshestar and the amazing Icelandic horses take care of the rest.
+    </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
+<TTDcard title="Bike rides" description={ <>
+      Explore the area on e-mountain bikes with our partner the Bike company (
+      <a href="https://bikecompany.is" target="_blank" rel="noopener noreferrer">
+        bikecompany.is
+      </a>
+      ).
+    </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
+<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend and next door neighbor, Dóra.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
   </div>
 
 {/*LOCATION*/}
