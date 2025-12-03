@@ -65,9 +65,9 @@ export default function Carousel() {
 
   return (
   
-  <div className="relative w-full overflow-hidden">
+  <div className="w-full overflow-hidden">
     {!loading && !err && items.length > 0 && (
-      <div ref={sliderRef} className="keen-slider w-full">
+      <div ref={sliderRef} className="keen-slider">
         {items.map((it) => {
           const url = transformFromSecureUrl(it.secure_url, 1920, 1080);
           return (

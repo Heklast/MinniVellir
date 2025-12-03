@@ -92,7 +92,7 @@ export default function Home() {
     </p>
   </div>
 
-  <div className="w-full h-[320px] md:h-[350px] shadow-xl overflow-hidden relative m-5 ">
+  <div className=" md:h-[350px] shadow-xl md:overflow-hidden md:m-5">
     <Carousel />
   </div>
 </div></FadeInOnScroll>
