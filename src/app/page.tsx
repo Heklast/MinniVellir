@@ -106,7 +106,7 @@ export default function Home() {
 {/*THINGS TO DO*/}
 <div className="TTD-prof-bg">
 <FadeInOnScroll>
-<div id="TTD" className="TTD-introo pl-10 pr-5 md:pr-20 md:pl-20 md:py-2"
+<div id="TTD" className="TTD-introo pl-10 pr-5 md:pr-20 md:pl-20 md:py-2 scroll-mt-10"
   >
 <h1 className="pb-0 pt-10 md:text-center">Things To Do</h1> 
 <h3 className="text-xl font-light leading-relaxed"> The area is very lively and there are a lot of things to do. Here are some of the most popular activities that allow you to enjoy your time while you explore the Icelandic nature and what our beautiful country has to offer. </h3>

@@ -40,7 +40,7 @@ export default function Area() {
 
   return (
     <FadeInOnScroll>
-      <div id="area" className="pl-10">
+      <div id="area" className="pl-10 scroll-mt-10">
         <div className="pb-10"></div>
         <div className="flex flex-col md:items-center gap-4 w-full">
           {/* Lightbox */}

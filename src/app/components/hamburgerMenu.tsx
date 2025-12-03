@@ -45,7 +45,7 @@ export default function HamburgerMenu() {
               The Farmhouse
             </a>
             <a href="#accommodation" onClick={() => setIsOpen(false)}>
-              Accommodation
+              Amenities
             </a>
             <a href="#area" onClick={() => setIsOpen(false)}>
               The Area

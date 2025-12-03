@@ -131,7 +131,7 @@ export default function Accommodation() {
 
   return (
     <FadeInOnScroll>
-      <div id="accommodation" className="pl-10">
+      <div id="accommodation" className="pl-10 scroll-mt-10">
         <div className="pb-10" />
         <div className="flex flex-col items-center gap-4 w-full">
           {/* Lightbox */}
