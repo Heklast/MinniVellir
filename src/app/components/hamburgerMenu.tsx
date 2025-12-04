@@ -18,8 +18,8 @@ export default function HamburgerMenu() {
       <div className="z-50 fixed top-0 right-0">
         {!isOpen ? (
           <button
-            className="text-3xl p-5 transition-colors"
-            style={{ color: showLogo ? "#3D3935" : "white" }}
+            className="text-4xl md:text-3xl p-5 pt-3 transition-colors"
+            style={{ color: showLogo ? "white" : "white" }} // #3D3935 GAMLI
             onClick={() => setIsOpen(true)}
           >
             ☰
@@ -39,7 +39,7 @@ export default function HamburgerMenu() {
         <div className="fixed top-0 right-0 h-screen md:w-1/4 w-full bg-white flex flex-col items-center justify-center shadow-lg z-40">
           <nav
             style={{ fontFamily: "Garamond" }}
-            className="flex flex-col gap-6 text-xl text-black"
+            className="flex flex-col gap-6 md:text-xl text-2xl text-black"
           >
             <a href="#farmhouse" onClick={() => setIsOpen(false)}>
               The Farmhouse

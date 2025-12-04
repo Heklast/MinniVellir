@@ -144,9 +144,10 @@ export default function Accommodation() {
           />
 
           <div className="TTD-intro">
-            <h1 className="pb-0 md:text-center">The old farmhouse</h1>
+            <h1 className="pb-0">Amenities</h1>
             <h3 className="text-xl font-light leading-relaxed pb-10">
-              A sneakpeak into the cozy farmhouse that Minni-Vellir Farmhouse is.
+              The farmhouse comfortably accommodates up to six guests in three bedrooms, each thoughtfully furnished to create a warm and restful atmosphere. The spacious double living room
+                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, or simply take in the peaceful views across the fields. 
             </h3>
           </div>
 
@@ -192,10 +193,9 @@ export default function Accommodation() {
           {!loading && !err && items.length > 0 && (
             <div className="flex flex-col-reverse md:flex-row md:gap-20 gap-2 md:pr-10 pr-5 items-start">
               <div className="accommodation-2">
-                <h1>Amenities</h1>
+                
                 <h3 className="text-xl font-light leading-relaxed">
-                  The farmhouse comfortably accommodates up to six guests in three bedrooms, each thoughtfully furnished to create a warm and restful atmosphere. The spacious double living room
-                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, or simply take in the peaceful views across the fields. <br /><br />
+                  
 
                   The fully equipped kitchen has everything you need to prepare meals, from morning coffee to hearty dinners after a day of exploration. The house also features two modern bathrooms,
                   ensuring comfort and convenience for families and small groups alike. <br /><br />

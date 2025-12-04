@@ -18,6 +18,7 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 import { dpr, format, quality } from "@cloudinary/url-gen/actions/delivery";
 import { auto as fAuto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qAuto } from "@cloudinary/url-gen/qualifiers/quality";
+import { p } from "framer-motion/client";
 
 const cld = new Cloudinary({ cloud: { cloudName: 'minnivellir' } });
 
@@ -25,6 +26,7 @@ export default function Home() {
 
   
  const myvideo = cld.video('HeroSection_nxtjsm');
+ const farmhousePic=cld.image('ICE_6287-copy-scaled_srg3qp'); //ekki ahfa harðkoðað?
   return (
      <div className="w-full">
        
@@ -56,10 +58,14 @@ export default function Home() {
       </div>
        </section>
       
-       <div className="p-5" style={{backgroundColor:'#DAD9D6'}}>
+       <div className="p-5" style={{backgroundColor:'black'}}>
          <div className="bordertexti">
-        <h2 style={{fontFamily:"Garamond", fontSize:"15px"} } className="text-[20px]">Minni Vellir Farmhouse - 851 Hella - Iceland</h2>
-        <h3 style={{fontFamily:"Garamond"}}>minnivellir@gmail.com</h3></div>
+          <h2 style={{fontFamily:"Garamond", fontSize:"20px"} } className="text-[20px] block md:hidden text-center">
+        Minni Vellir Farmhouse <br></br>
+        851 Hella - Iceland
+</h2>
+        <h2 style={{fontFamily:"Garamond", fontSize:"20px"} } className="text-[20px] hidden md:block">Minni Vellir Farmhouse - 851 Hella - Iceland</h2>
+        </div>
         </div>
        <section style={{fontFamily:'Garamond',color:'#3D3935'}}>
 
@@ -68,16 +74,14 @@ export default function Home() {
      { /*efraaa*/}
 
       <div className="flex flex-col gap-20 p-0 pt-0">
-     
-
-
+    
         { /*prófa neðra eftir gordon ramsey*/}
         
         <FadeInOnScroll>
        <div id="farmhouse" className="slider-card flex flex-col-reverse md:flex-row">
   <div className="slider-text">
     
-    <h1 className="text-4xl leading-relaxed">The Farmhouse</h1>
+    <h1 className="text-4xl leading-relaxed">The Old Farmhouse</h1>
     <p className="text-xl font-light leading-relaxed">
       
       According to ancient tales, the Minni-Vellir farm in Landsveit was first
@@ -85,6 +89,7 @@ export default function Home() {
       ever since. The last residents of the old farmhouse were two brothers and
       their sister, who lived here for over fifty years, caring for the land and
       keeping its quiet traditions alive. <br /><br />
+
       The recently renovated farmhouse preserves its authentic charm while
       offering modern comfort and coziness. Inside, you’ll find a warm and
       inviting atmosphere — perfect for relaxing after a day of exploring the
@@ -92,8 +97,15 @@ export default function Home() {
     </p>
   </div>
 
-  <div className=" md:h-[350px] shadow-xl md:overflow-hidden md:m-5">
-    <Carousel />
+  <div className="">
+    <AdvancedImage
+          className="mynd"
+          cldImg={farmhousePic}
+          alt="minni vellir"
+          fill
+          style={{ objectFit: 'cover', boxShadow:'initial' }}
+          priority
+        />
   </div>
 </div></FadeInOnScroll>
 
@@ -113,18 +125,17 @@ export default function Home() {
 </div></FadeInOnScroll>
 
 <TTDcard title="Horseback riding" description={ <>
-      Explore the area on horseback with our partner, Íshestar.  The area is reputed for the quality and variety of its riding paths.  Regardless of your riding experience, our partner Íshestar  (
-      <a href="https://ishestar.is" target="_blank" rel="noopener noreferrer">
-        ishestar.is
+      Explore the area on horseback with our partner, Íshestar.  The area is reputed for the quality and variety of its riding paths.  Regardless of your riding experience, our partner 
+      <a href="https://ishestar.is" target="_blank" rel="noopener noreferrer" style={{color: "brown"}}> 
+       {" "} Íshestar {" "}
       </a> 
-      ) will help provide an unforgettable experience.  You decide the length and pace of the ride with a tour guide and Íshestar and the amazing Icelandic horses take care of the rest.
+        will help provide an unforgettable experience.  You decide the length and pace of the ride with a tour guide and Íshestar and the amazing Icelandic horses take care of the rest.
     </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
 <TTDcard title="Bike rides" description={ <>
-      Explore the area on e-mountain bikes with our partner the Bike company (
-      <a href="https://bikecompany.is" target="_blank" rel="noopener noreferrer">
-        bikecompany.is
+      Explore the area on e-mountain bikes with our partner
+      <a href="https://bikecompany.is" target="_blank" rel="noopener noreferrer" style={{color: "brown"}}>
+       {" "} Bike Company.
       </a>
-      ).
     </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
 <TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend and next door neighbor, Dóra.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
   </div>

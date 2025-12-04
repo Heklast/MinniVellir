@@ -59,3 +59,34 @@ deplar eru með gotham á main og larken á titlum
     minnka myndir í glory section
     bulletpoint lista í acc og mynd, sama og ttd
     hafa loc sama og ttd
+
+
+
+    taka út sneakpeakDONE
+    amenities og fyrsta málsgrein fyrir ofan slider, vinstrae meginDONE
+
+    velja bara mynd í efsta og breyta í old farmhouse, laga sliderinnnDONE
+
+    hafa ishestar í öðrum lit og hafa það sem linkDONE
+    taka ut contact us for more infoDONE
+
+    bæta við punkti í efnisgrein locationDONE
+
+    textann í loc beint f neðan titil og síðan mynd, eins og ishestar, titill, texti, mynd DONE SEMIII SPYRJA HVORT ÖRÐUVISI OG ÖÐRUVISI RÖÐ Í SÍMA?
+        í sima, texta fyrir ofan, titil f ofan, kort, síðan texti, titill, texti, mynd DONE
+        taka South Iceland út DONE 
+
+    prófa svartan lit DONE
+
+    hafa hamburger menu stærri í síma og aðeins stærra letur DONE
+        hann er aðeins neðar en logo, laga það DONE EN CHECKAA
+
+    taka út emailDONE
+
+    mynd á milli efnisgreina
+
+    titil og texta vinstra megin
+
+    
+    
+
