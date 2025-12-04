@@ -148,7 +148,7 @@ export default function Home() {
   <div className="contactus  md:flex-row flex flex-col gap-8 md:items-start">
     <div className="contactusText w-full md:w-1/2 space-y-4">
       <h1 className="text-white text-3xl md:text-4xl font-semibold">Contact us</h1>
-      <h3 className="text-white text-base md:text-lg font-light leading-relaxed">
+      <h3 className="text-white font-light leading-relaxed text-2xl">
         Please contact us for bookings and/or if you have any questions.
       </h3>
     </div>

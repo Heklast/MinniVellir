@@ -253,7 +253,13 @@ font-size: xx-large;
   justify-content: space-between;
   padding:1rem;
   padding-inline: 2rem;
-  gap:5rem;
+  gap:7rem;
+}
+@media (max-width: 768px) {
+  .contactus {
+    padding-inline: 1rem;
+    gap:3rem;
+  }
 }
 
 .contactusText{
@@ -276,7 +282,7 @@ input:hover{
 }
 
 .textfield{
-  padding:0.5rem;
+  padding:1rem;
   border:#0a0a0a solid 1px;
   height:1.5rem;
   opacity: 0.7;

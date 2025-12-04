@@ -50,15 +50,15 @@ export default function ContactUs() {
       <form className="flex flex-col w-full md:flex-1 gap-4" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row gap-4 w-full">
           <div className="flex flex-col w-full md:flex-1">
-            <label className="text-white w-full">First Name</label>
+            <label className="text-white w-full text-xl">First Name</label>
             <input
               className="textfield w-full"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
-          <div className="flex flex-col w-full md:flex-1">
-            <label className="text-white">Last Name</label>
+          <div className="flex flex-col w-full md:flex-1 ">
+            <label className="text-white text-xl">Last Name</label>
             <input
               className="textfield"
               value={lastName}
@@ -68,7 +68,7 @@ export default function ContactUs() {
         </div>
 
         <div className="flex flex-col">
-          <label className="text-white">Email</label>
+          <label className="text-white text-xl">Email</label>
           <input
             className="textfield"
             value={email}
@@ -77,7 +77,7 @@ export default function ContactUs() {
         </div>
 
         <div className="flex flex-col">
-          <label className="text-white">Message</label>
+          <label className="text-white text-xl">Message</label>
           <textarea
             className="messTextfield"
             value={message}
