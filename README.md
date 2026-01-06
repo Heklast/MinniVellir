@@ -50,3 +50,14 @@ breyta efnistexta
 breyta litum?
 stækka contact us?
 
+
+Nýtt todo
+hvað með að hafa header svartan til að matcha footer? þe ekki þennan gráa lit
+breyta öllum myndum
+breyta þannig fari á mv email
+breyta litunum á buttons?
+breyta heitum í menu?
+gera menuinn hægari að fara að efninu?*
+responsiveness
+kannski bara sleppa emailinu?
+

@@ -42,7 +42,7 @@ export default function HamburgerMenu() {
             className="flex flex-col gap-6 md:text-xl text-2xl text-black"
           >
             <a href="#farmhouse" onClick={() => setIsOpen(false)}>
-              The Farmhouse
+              The Old Farmhouse
             </a>
             <a href="#accommodation" onClick={() => setIsOpen(false)}>
               Amenities

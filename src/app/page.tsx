@@ -58,7 +58,7 @@ export default function Home() {
       </div>
        </section>
       
-       <div className="p-5" style={{backgroundColor:'black'}}>
+       <div className="p-5" style={{backgroundColor:'#5E6E73'}}>
          <div className="bordertexti">
           <h2 style={{fontFamily:"Garamond", fontSize:"20px"} } className="text-[20px] block md:hidden text-center">
         Minni Vellir Farmhouse <br></br>
@@ -82,7 +82,7 @@ export default function Home() {
   <div className="slider-text">
     
     <h1 className="text-4xl leading-relaxed">The Old Farmhouse</h1>
-    <p className="text-xl font-light leading-relaxed">
+    <h3 className="text-xl font-light leading-relaxed"> 
       
       According to ancient tales, the Minni-Vellir farm in Landsveit was first
       settled around 900 AD and has been inhabited, more-or-less continuously,
@@ -94,7 +94,7 @@ export default function Home() {
       offering modern comfort and coziness. Inside, you’ll find a warm and
       inviting atmosphere — perfect for relaxing after a day of exploring the
       natural wonders of southern Iceland.
-    </p>
+    </h3>
   </div>
 
   <div className="">
@@ -158,6 +158,9 @@ export default function Home() {
     </div>
   </div>
 </div>
+
+
+
 
       </div>
       </section>

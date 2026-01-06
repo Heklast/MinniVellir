@@ -32,7 +32,7 @@ export default function TTDcard({
           <h1 className="text-xl md:text-4xl leading-relaxed font-semibold">
             {title}
           </h1>
-          <h3 className="text-lg md:text-xl font-light leading-relaxed">
+          <h3 className="text-xl md:text-xl font-light leading-relaxed">
             {description}
           </h3>
           <button className="TTD-button bg-[#3D3935] text-white px-6 py-2 rounded-md mt-4 hover:bg-[#5a554f] transition">

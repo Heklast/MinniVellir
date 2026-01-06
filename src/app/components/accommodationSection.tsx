@@ -131,7 +131,7 @@ export default function Accommodation() {
 
   return (
     <FadeInOnScroll>
-      <div id="accommodation" className="pl-10 scroll-mt-10">
+      <div id="accommodation" className="scroll-mt-10">
         <div className="pb-10" />
         <div className="flex flex-col items-center gap-4 w-full">
           {/* Lightbox */}
@@ -147,7 +147,8 @@ export default function Accommodation() {
             <h1 className="pb-0">Amenities</h1>
             <h3 className="text-xl font-light leading-relaxed pb-10">
               The farmhouse comfortably accommodates up to six guests in three bedrooms, each thoughtfully furnished to create a warm and restful atmosphere. The spacious double living room
-                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, or simply take in the peaceful views across the fields. 
+                  offers plenty of space to unwind — whether you wish to enjoy a quiet evening with a book, or simply take in the peaceful views across the fields. In addition, the cozy loft
+                  contains a comfortable lounge and further sleeping accommodation.
             </h3>
           </div>
 
@@ -172,7 +173,7 @@ export default function Accommodation() {
                     <img
                       src={url}
                       alt={it.public_id.split('/').pop() ?? `Slide ${i + 1}`}
-                      className="block w-full h-full object-cover"
+                      className="block w-full h-full object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300"
                       onLoad={() => instanceRef.current?.update()}
                       loading="lazy"
                     />
@@ -195,10 +196,11 @@ export default function Accommodation() {
               <div className="accommodation-2">
                 
                 <h3 className="text-xl font-light leading-relaxed">
-                  
 
                   The fully equipped kitchen has everything you need to prepare meals, from morning coffee to hearty dinners after a day of exploration. The house also features two modern bathrooms,
                   ensuring comfort and convenience for families and small groups alike. <br /><br />
+
+
 
                   Blending traditional charm with modern comfort, the farmhouse provides the perfect balance between authenticity and relaxation — a welcoming home base for your adventures in southern Iceland.
                 </h3>
