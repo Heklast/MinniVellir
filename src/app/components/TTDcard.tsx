@@ -35,7 +35,7 @@ export default function TTDcard({
           <h3 className="text-xl md:text-xl font-light leading-relaxed">
             {description}
           </h3>
-          <button className="TTD-button bg-[#3D3935] text-white px-6 py-2 rounded-md mt-4 hover:bg-[#5a554f] transition">
+          <button className="TTD-button bg-[#5E6E73] text-white px-6 py-2 rounded-md mt-4 hover:bg-[#5a554f] transition">
             <a href="#contactUs">Contact us for more info</a>
           </button>
         </div>

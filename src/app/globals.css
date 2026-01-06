@@ -219,8 +219,8 @@ font-size: xx-large;
 }
 
 .TTD-button{
-  color:black;
-  background-color: rgb(181, 164, 164);
+  color:white;
+  background-color: #5E6E73;
   font-family:'Jura';
   letter-spacing:0.1em;
   font-size: smaller;
@@ -233,7 +233,7 @@ font-size: xx-large;
 }
 
 .TTD-button:hover{
-  background-color: rgb(228, 217, 217);
+  background-color: #b9c9ce;
 }
 
 .TTD-intro{
