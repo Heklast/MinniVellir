@@ -137,7 +137,7 @@ export default function Home() {
        {" "} Bike Company.
       </a>
     </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
-<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend and next door neighbor, Dóra.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/hike_ykrpot" imageFirst={true} />
+<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend and next door neighbor, Dóra.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/Trek_Islande-8_csar9l" imageFirst={true} />
   </div>
 
 {/*LOCATION*/}

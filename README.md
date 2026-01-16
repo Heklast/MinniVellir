@@ -61,3 +61,5 @@ gera menuinn hægari að fara að efninu?*
 responsiveness
 kannski bara sleppa emailinu?
 
+OKEI
+viljum við h3 eða p fyrir textann???
