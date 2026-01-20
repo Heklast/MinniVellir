@@ -63,3 +63,9 @@ kannski bara sleppa emailinu?
 
 OKEI
 viljum við h3 eða p fyrir textann???
+
+
+TODO:
+Loada letri á undan!!!!
+laga the area titil? hafa smá texta á undan slidernum?
+laga button á contact formi og mögulega hafa hvíta input kassana?
