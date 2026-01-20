@@ -21,7 +21,7 @@ function transformFromSecureUrl(secureUrl: string, w = 1920, h = 1080) {
   const before = secureUrl.slice(0, idx + marker.length);
   const after = secureUrl.slice(idx + marker.length);
   // Device-optimized + smart fill crop to your target box
-  const transform = `f_auto,q_auto,dpr_auto,c_fill,g_auto,w_${w},h_${h}/`;
+  const transform = `f_auto,q_auto,dpr_auto,c_auto,g_auto,w_${w},h_${h}/`;
   return before + transform + after;
 }
 

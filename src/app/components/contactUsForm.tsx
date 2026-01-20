@@ -92,7 +92,7 @@ export default function ContactUs() {
 
         <button
           type="submit"
-          className="TTD-button self-start md:self-end"
+          className="TTD-button contactButton self-start md:self-end"
           disabled={status === "sending"}
         >
           {status === "sending" ? "Sending..." : "Send"}

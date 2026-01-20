@@ -1,0 +1,14 @@
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Limelight&amp;display=swap');
+          .logo-text {
+            font-family: 'Limelight', cursive;
+            font-size: 140px;
+            fill: #5E6E73;
+            letter-spacing: -0.05em;
+          }
+        </style>
+        <text x="200" y="150" text-anchor="middle" class="logo-text">MV</text>
+      </svg>
+    

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     width="32" height="32">
+
+  <style>
+    @font-face {
+      font-family: "Limelight";
+      src: url("/Limelight-Regular.ttf") format("truetype");
+    }
+
+    text {
+      font-family: "Limelight", serif;
+      fill: #5E6E73;
+      font-size: 30px;          /* BIGGER */
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- slight vertical nudge to visually center Limelight -->
+  <text x="16" y="18">MV</text>
+</svg>

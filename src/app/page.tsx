@@ -19,6 +19,7 @@ import { dpr, format, quality } from "@cloudinary/url-gen/actions/delivery";
 import { auto as fAuto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qAuto } from "@cloudinary/url-gen/qualifiers/quality";
 import { p } from "framer-motion/client";
+import Head from "next/head";
 
 const cld = new Cloudinary({ cloud: { cloudName: 'minnivellir' } });
 
@@ -28,7 +29,12 @@ export default function Home() {
  const myvideo = cld.video('HeroSection_nxtjsm');
  const farmhousePic=cld.image('ICE_6287-copy-scaled_srg3qp'); //ekki ahfa harðkoðað?
   return (
+     <>
+      <div className="w-full" />
+    
+    
      <div className="w-full">
+     
        
 
       <Header />
@@ -164,7 +170,7 @@ export default function Home() {
 
       </div>
       </section>
-    </div>
+    </div></>
     );
 }
        
