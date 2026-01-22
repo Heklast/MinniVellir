@@ -135,19 +135,19 @@ export default function Home() {
   
    <a href="https://ishestar.is" target="_blank" rel="noopener noreferrer" style={{color: "brown"}}> 
        {" "} Íshestar
-      </a>, and lead by Beggi our good friend and neighbor.
-The Icelandic horse is famous for kind its kind temperament, and its five gaits: walk, trot, gallop, pace and tölt.  Regardless of your riding experience, we will help provide an unforgettable experience.  You decide the length and pace of the ride, Íshestar, Beggi and the amazing Icelandic horses take care of the rest.
+      </a>, and lead by Beggi, our good friend and neighbor.
+The Icelandic horse is famous for its kind temperament, and its five gaits: walk, trot, gallop, pace and tölt.  Regardless of your riding experience, we will help provide an unforgettable experience.  You decide the length and pace of the ride, Íshestar, Beggi and the amazing Icelandic horses take care of the rest.
      
        
     </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/20230717_164556_copy_pc8ljh" imageFirst={true} />
 <TTDcard title="Bike rides" description={ <>
-      The area also offers endless mountain bike riding opportunities for beginners to advanced riders.  Our partner
+      The area offers endless mountain bike riding opportunities for beginners to advanced riders.  Our partner
       <a href="https://bikecompany.is" target="_blank" rel="noopener noreferrer" style={{color: "brown"}}>
        {" "} Bike Company
       </a> can organize tours and rides according to your wishes.
       
     </>} imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/BIKE-COMPANY-_Fredrik-Schenholm-2_n2zktj" imageFirst={false} />
-<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with our dear friend and next door neighbor, Dóra.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/Trek_Islande-8_csar9l" imageFirst={true} />
+<TTDcard title="Hiking" description="Go on hikes on top of or around one of the beautiful mountains of the area with Dóra, our dear friend and neighbor.  She knows the area and all the mountains as the back of her hand." imageSrc="https://res.cloudinary.com/minnivellir/image/upload/w_1200,h_800,q_auto,f_auto/Trek_Islande-8_csar9l" imageFirst={true} />
   </div>
 
 {/*LOCATION*/}
