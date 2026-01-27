@@ -30,13 +30,11 @@ export default function Home() {
  const farmhousePic=cld.image('ICE_6287-copy-scaled_srg3qp'); //ekki ahfa harðkoðað?
   return (
      <>
+     <div className="font_preload" style={{opacity: "0"}}>
+     <span style={{fontFamily: 'Limelight'}}></span>
+  </div>
       <div className="w-full" />
-    
-    
      <div className="w-full">
-     
-       
-
       <Header />
       {/* HERO SECTION */}
       <section id="home" className="relative w-full h-screen md:overflow-hidden">
